@@ -1,0 +1,1362 @@
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #DD4422">&#39;&#39;&#39;</span>
+<span style="color: #DD4422">File name: final.py</span>
+<span style="color: #DD4422">Author: Patrick LaChapelle</span>
+<span style="color: #DD4422">Class: Computer Science 131</span>
+<span style="color: #DD4422">        Summer quarter 2017</span>
+<span style="color: #DD4422">Date created: 07/25/2017</span>
+<span style="color: #DD4422">Date last modified: 08/16/2017</span>
+<span style="color: #DD4422">&#39;&#39;&#39;</span>
+
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;Welcome to the most optimal and shophisticated computer program mankind has ever created.&quot;</span>) <span style="color: #888888">#welcome user to program</span>
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;What would you like to do?&quot;</span>) <span style="color: #888888">#ask user what they want to do</span>
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;please choose one:&quot;</span>) <span style="color: #888888">#prompt user to choose type of function</span>
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;                  Image alteration&quot;</span>) <span style="color: #888888">#show first option of functions to run</span>
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;                  recursive function&quot;</span>) <span style="color: #888888">#show second option of functions to run</span>
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;                  name drawing&quot;</span>) <span style="color: #888888">#show third option of functions to run</span>
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;                  nested loop grid&quot;</span>) <span style="color: #888888">#show fourth option of functions to run</span>
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;enter type of function:&quot;</span>)
+functiontype<span style="color: #333333">=</span><span style="color: #007020">input</span>()
+
+<span style="color: #888888">###Image alteration</span>
+
+<span style="color: #008800; font-weight: bold">if</span> functiontype <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;Image alteration&quot;</span>:
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;What type of task would you like to perform? (Please type: grayscale or pixel)&quot;</span>) <span style="color: #888888">#Asks user to choose what alteration they want to perform</span>
+    cType<span style="color: #333333">=</span><span style="color: #007020">str</span>(<span style="color: #007020">input</span>())  <span style="color: #888888"># takes type of user input</span>
+    <span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">PIL</span> <span style="color: #008800; font-weight: bold">import</span> Image, ImageFilter  <span style="color: #888888">#import Image from the downloadable Python Pillow module</span>
+
+
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;enter image file:&quot;</span>) <span style="color: #888888"># prompts user to enter the image </span>
+    myimage <span style="color: #333333">=</span> <span style="color: #007020">input</span>() <span style="color: #888888">#input image file</span>
+
+    <span style="color: #008800; font-weight: bold">try</span>:
+        picture_file <span style="color: #333333">=</span> Image<span style="color: #333333">.</span>open(myimage) <span style="color: #888888">#looks for exception in code</span>
+        im <span style="color: #333333">=</span> picture_file<span style="color: #333333">.</span>load()
+    <span style="color: #008800; font-weight: bold">except</span>:
+        <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&#39;Invalid file&#39;</span>)
+
+    opicture_file <span style="color: #333333">=</span> Image<span style="color: #333333">.</span>open(myimage)
+
+    <span style="color: #008800; font-weight: bold">print</span>(picture_file<span style="color: #333333">.</span>format, picture_file<span style="color: #333333">.</span>size, picture_file<span style="color: #333333">.</span>mode) <span style="color: #888888">#tell user the information about the picture file</span>
+
+    x_max<span style="color: #333333">=</span>picture_file<span style="color: #333333">.</span>size[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #888888">#set variable x_max to the maximum x value of function</span>
+    y_max<span style="color: #333333">=</span>picture_file<span style="color: #333333">.</span>size[<span style="color: #0000DD; font-weight: bold">1</span>] <span style="color: #888888">#set variable y_max to the maximum y value of function</span>
+
+    <span style="color: #008800; font-weight: bold">for</span> y <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">0</span>, y_max): <span style="color: #888888">#sets range value for y</span>
+        row <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;&quot;</span>
+    <span style="color: #008800; font-weight: bold">for</span> x <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">0</span>, x_max): <span style="color: #888888">#sets range value for x</span>
+        row <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;&quot;</span>
+
+        R, G, B <span style="color: #333333">=</span> im[x, y] <span style="color: #888888">#set the RGB values</span>
+
+    <span style="color: #008800; font-weight: bold">if</span> cType<span style="color: #333333">==</span><span style="background-color: #fff0f0">&#39;pixel&#39;</span>: <span style="color: #888888">#set parameters for when input is &#39;pixel&#39;</span>
+        <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;Enter coordinates of desired pixel in x,y form&quot;</span>) <span style="color: #888888">#prompt the user to input the coordinates of the desired pixel</span>
+        specific_pixel <span style="color: #333333">=</span> [<span style="color: #007020">int</span>(x) <span style="color: #008800; font-weight: bold">for</span> x <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">input</span>()<span style="color: #333333">.</span>split(<span style="background-color: #fff0f0">&#39;,&#39;</span>)] <span style="color: #888888">#enter the coordinates using the for loop</span>
+        x, y <span style="color: #333333">=</span> specific_pixel <span style="color: #888888">#change coordinates to be equal to x and y values</span>
+        R, G, B <span style="color: #333333">=</span> im[x, y] <span style="color: #888888">#gets RGB values from the </span>
+        <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;R,G,B values corresponding with this pixel are:&quot;</span>) <span style="color: #888888"># explains to the user what they are about to recieve</span>
+        <span style="color: #008800; font-weight: bold">print</span>(R, G, B) <span style="color: #888888">#prints the RGB value corresponding with the particular</span>
+
+        <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;enter new R,G,B values&quot;</span>) <span style="color: #888888">#prompts user to enter adjusted rgb values</span>
+        new_RGB <span style="color: #333333">=</span> [<span style="color: #007020">int</span>(x) <span style="color: #008800; font-weight: bold">for</span> x <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">input</span>()<span style="color: #333333">.</span>split(<span style="background-color: #fff0f0">&#39;,&#39;</span>)] <span style="color: #888888">#allows input for new rgb values</span>
+
+        a, b, c <span style="color: #333333">=</span> new_RGB <span style="color: #888888">#changes the rgb values to three seperate values</span>
+
+        im[x, y] <span style="color: #333333">=</span> (a, b, c) <span style="color: #888888">#inputs user&#39;s rgb values for the pixel</span>
+
+        picture_file<span style="color: #333333">.</span>save(<span style="background-color: #fff0f0">&quot;newimage.png&quot;</span>) <span style="color: #888888">#saves the new pixel</span>
+        picture_file<span style="color: #333333">.</span>show(<span style="background-color: #fff0f0">&quot;newimage.png&quot;</span>) <span style="color: #888888">#displays the altered image</span>
+
+    <span style="color: #008800; font-weight: bold">elif</span> cType<span style="color: #333333">==</span><span style="background-color: #fff0f0">&#39;grayscale&#39;</span>: <span style="color: #888888">#provides code for when the user chooses &quot;grayscale&quot; as the type of function that they would like to perform</span>
+        <span style="color: #008800; font-weight: bold">for</span> a <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(picture_file<span style="color: #333333">.</span>size[<span style="color: #0000DD; font-weight: bold">0</span>]): <span style="color: #888888">#allows a to be any value in the range</span>
+            a<span style="color: #333333">=</span><span style="color: #007020">int</span>()
+        <span style="color: #008800; font-weight: bold">for</span> b <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(picture_file<span style="color: #333333">.</span>size[<span style="color: #0000DD; font-weight: bold">1</span>]): <span style="color: #888888">#allows b to be any value in the range</span>
+            b<span style="color: #333333">=</span><span style="color: #007020">int</span>()
+        x,y<span style="color: #333333">=</span> [a,b] <span style="color: #888888">#sets x and y values to a and b, which allows x and y to be any value in the range</span>
+        R, G, B, <span style="color: #333333">=</span> im[x,y] <span style="color: #888888">#gets the rgb values of any pixel</span>
+        gray_rgb <span style="color: #333333">=</span> <span style="color: #007020">int</span>((R <span style="color: #333333">*</span> <span style="color: #6600EE; font-weight: bold">0.299</span> <span style="color: #333333">+</span> G <span style="color: #333333">*</span> <span style="color: #6600EE; font-weight: bold">0.587</span> <span style="color: #333333">+</span> B <span style="color: #333333">*</span> <span style="color: #6600EE; font-weight: bold">0.114</span>)) <span style="color: #888888">#changes RGB to a value that will be on the gray scale ###note: this uses the weighted method, which is optimal for the human viewer</span>
+        im[x, y] <span style="color: #333333">=</span> (gray_rgb) <span style="color: #888888">#inputs the grayscale values for all pixels in the file</span>
+        picture_file<span style="color: #333333">.</span>save(<span style="background-color: #fff0f0">&quot;newimage.png&quot;</span>) <span style="color: #888888">#saves the file</span>
+        picture_file<span style="color: #333333">.</span>show(<span style="background-color: #fff0f0">&quot;newimage.png&quot;</span>) <span style="color: #888888">#displays the file</span>
+
+    <span style="color: #008800; font-weight: bold">else</span>: <span style="color: #888888">#gives code for if user enters something other than one of the desired inputs</span>
+        <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;error: input unreadable, please enter pixel or grayscale&quot;</span>)
+
+<span style="color: #888888">### recursive function</span>
+
+<span style="color: #008800; font-weight: bold">elif</span> functiontype <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;recursive function&quot;</span>: <span style="color: #888888">#gives what to do if the user enters recursive function as what they want to do</span>
+
+    <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">turtle</span> <span style="color: #888888">#import the module turtle</span>
+    
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;choose shape (spiral or flower)&quot;</span>) <span style="color: #888888">#prompts user for  type of shape input</span>
+    shapetype <span style="color: #333333">=</span> <span style="color: #007020">input</span>() <span style="color: #888888">#takes input from user</span>
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;choose size&quot;</span>) <span style="color: #888888">#prompts user for size input</span>
+    size1<span style="color: #333333">=</span><span style="color: #007020">int</span>(<span style="color: #007020">input</span>()) <span style="color: #888888">#takes input from user</span>
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;choose width of line&quot;</span>) <span style="color: #888888">#prompts user for width input</span>
+    width1 <span style="color: #333333">=</span> <span style="color: #007020">int</span>(<span style="color: #007020">input</span>()) <span style="color: #888888">##takes input from user</span>
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;choose number of repititions&quot;</span>) <span style="color: #888888">#prompts user for repitition input</span>
+    rep <span style="color: #333333">=</span> <span style="color: #007020">int</span>(<span style="color: #007020">input</span>()) <span style="color: #888888">#takes input from user</span>
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;choose background color&quot;</span>) <span style="color: #888888">#prompts user for background color input</span>
+    bg_color1<span style="color: #333333">=</span><span style="color: #007020">input</span>() <span style="color: #888888">#takes input from user</span>
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;choose color of line&quot;</span>) <span style="color: #888888">#prompts user for line color input</span>
+    line_color1<span style="color: #333333">=</span><span style="color: #007020">input</span>() <span style="color: #888888">#takes input from user</span>
+
+    turtle<span style="color: #333333">.</span>bgcolor(bg_color1) <span style="color: #888888">#sets background color using the input from the user</span>
+    turtle<span style="color: #333333">.</span>pencolor(line_color1) <span style="color: #888888">#sets the color of the line using the input from the user</span>
+
+
+    turtle<span style="color: #333333">.</span>speed(<span style="color: #0000DD; font-weight: bold">0</span>) <span style="color: #888888">#sets turtle to draw the recursive function as quickly as possible</span>
+
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">shape</span>(length,n,_width):<span style="color: #888888">#sets the code that defines the spiral</span>
+        <span style="color: #008800; font-weight: bold">if</span> n<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>: <span style="color: #888888">#sets perameter for if there is no input for repititions</span>
+            turtle<span style="color: #333333">.</span>forward(length) 
+        <span style="color: #008800; font-weight: bold">elif</span> n<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">1</span>: <span style="color: #888888">#sets perameter for if there is less than one repitition</span>
+            <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;error: cannot generate less than 1 repititions of recursive shape&quot;</span>) 
+        <span style="color: #008800; font-weight: bold">else</span>: <span style="color: #888888">#sets perameter for what to do if all goes according to plan</span>
+            turtle<span style="color: #333333">.</span>width(_width) <span style="color: #888888">#sets width to desired width</span>
+            turtle<span style="color: #333333">.</span>fd(length<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">4</span>) <span style="color: #888888">#moves forward 1/4 of the length</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">60</span>) <span style="color: #888888">#turns right 60 degrees</span>
+            turtle<span style="color: #333333">.</span>fd(length <span style="color: #333333">/</span> <span style="color: #0000DD; font-weight: bold">4</span>) <span style="color: #888888">#moves forward 1/4 of the length</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">60</span>) <span style="color: #888888">#turns right 60 degrees</span>
+            turtle<span style="color: #333333">.</span>fd(length <span style="color: #333333">/</span> <span style="color: #0000DD; font-weight: bold">4</span>) <span style="color: #888888">#moves forward 1/4 of the length</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">60</span>) <span style="color: #888888">#turns right 60 degrees</span>
+            turtle<span style="color: #333333">.</span>circle(length) <span style="color: #888888">#creates circle of the length input</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">180</span>) <span style="color: #888888">#turns 180 degrees (reverses direction)</span>
+            turtle<span style="color: #333333">.</span>circle(length) <span style="color: #888888">#creates another circle or radius length</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">182</span>) <span style="color: #888888">#turn right 182 degrees</span>
+            shape(length<span style="color: #333333">*</span><span style="color: #6600EE; font-weight: bold">1.1</span>,n<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>,_width) <span style="color: #888888">#repeat function w/ altered inputs</span>
+            turtle<span style="color: #333333">.</span>exitonclick() <span style="color: #888888">#exits turtle window on click</span>
+            <span style="color: #008800; font-weight: bold">return</span>
+
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">spiral2</span>(length2,n2,_width2): <span style="color: #888888">#defines spiral function</span>
+        <span style="color: #008800; font-weight: bold">if</span> n2<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>: <span style="color: #888888">#defines what to do if number of repititions is not entered</span>
+            turtle<span style="color: #333333">.</span>forward(length2) <span style="color: #888888"># move forward 2</span>
+        <span style="color: #008800; font-weight: bold">elif</span> n2<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">1</span>: <span style="color: #888888">#defines what to do if less than 1 repition is entered</span>
+            <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;error: cannot generate less than 1 repititions of a recursive shape&quot;</span>) 
+        <span style="color: #008800; font-weight: bold">else</span>: <span style="color: #888888">#defines what to do if a desired input is entered</span>
+            turtle<span style="color: #333333">.</span>width(_width2) <span style="color: #888888">#penwidth is 2</span>
+            turtle<span style="color: #333333">.</span>circle(length2) <span style="color: #888888">#create circle w/ radius double the length of length input</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">45</span>) <span style="color: #888888">#turn right 45 degrees</span>
+            turtle<span style="color: #333333">.</span>circle(length2) <span style="color: #888888">#create circle w/ radius twice of the length input</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">45</span>) <span style="color: #888888">#turn right 45 degrees</span>
+            turtle<span style="color: #333333">.</span>circle(length2) <span style="color: #888888">#create circle w/ radius twice of the length input</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">45</span>) <span style="color: #888888">#turn right 45 degrees</span>
+            turtle<span style="color: #333333">.</span>circle(length2) <span style="color: #888888">#create circle w/ radius twice of the length input</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">45</span>) <span style="color: #888888">#turn right 45 degrees</span>
+            turtle<span style="color: #333333">.</span>circle(length2) <span style="color: #888888">#create circle w/ radius twice of the length input</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">45</span>) <span style="color: #888888">#turn right 45 degrees</span>
+            turtle<span style="color: #333333">.</span>circle(length2) <span style="color: #888888">#create circle w/ radius twice of the length input</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">45</span>) <span style="color: #888888">#turn right 45 degrees</span>
+            turtle<span style="color: #333333">.</span>circle(length2) <span style="color: #888888">#create circle w/ radius twice of the length input</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">45</span>) <span style="color: #888888">#turn right 45 degrees</span>
+            turtle<span style="color: #333333">.</span>circle(length2) <span style="color: #888888">#create circle w/ radius twice of the length input</span>
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">45</span>) <span style="color: #888888">#turn right 45 degrees</span>
+            spiral2(length2<span style="color: #333333">*</span><span style="color: #6600EE; font-weight: bold">1.1</span>,n2<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>,_width2) <span style="color: #888888">#repeat function w/ altered inputs</span>
+            turtle<span style="color: #333333">.</span>exitonclick() <span style="color: #888888">#exits turtle window on click</span>
+            <span style="color: #008800; font-weight: bold">return</span>
+
+    <span style="color: #008800; font-weight: bold">if</span> shapetype<span style="color: #333333">==</span><span style="background-color: #fff0f0">&quot;spiral&quot;</span>: <span style="color: #888888">#if spiral is the desired shape follow this</span>
+        <span style="color: #008800; font-weight: bold">print</span>(shape(size1,rep,width1))
+    <span style="color: #008800; font-weight: bold">elif</span> shapetype <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;flower&quot;</span>: <span style="color: #888888">#if flower is the desired shape follow this</span>
+        <span style="color: #008800; font-weight: bold">print</span>(spiral2(size1,rep,width1))
+    <span style="color: #008800; font-weight: bold">else</span>: <span style="color: #888888">#provides code for what to do if something other than one of the desired inputs is entered</span>
+        <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;error: shape type not available. Please choose either spiral or flower&quot;</span>) <span style="color: #888888">#if the input for the desired shape typeis anything other than spiral or flower, print this error statement</span>
+    turtle<span style="color: #333333">.</span>exitonclick() <span style="color: #888888">#allows user to use a click of a mouse as a way to exit out of the turtle screen</span>
+              
+<span style="color: #888888">### Nested Loop function</span>
+
+<span style="color: #008800; font-weight: bold">elif</span> functiontype <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;nested loop grid&quot;</span>: <span style="color: #888888">#describes what to do if user enters nested loop grid as the type of function they would like to perform</span>
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;Enter height&quot;</span>) <span style="color: #888888">#prompt user to enter the height of their desired 2d grid</span>
+    height<span style="color: #333333">=</span><span style="color: #007020">int</span>(<span style="color: #007020">input</span>()) <span style="color: #888888">#user enters their desired height</span>
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;enter width&quot;</span>) <span style="color: #888888">#prompt user to enter the width of the desired 2d grid</span>
+    width<span style="color: #333333">=</span><span style="color: #007020">int</span>(<span style="color: #007020">input</span>()) <span style="color: #888888">#user enters the desired width</span>
+
+    grid <span style="color: #333333">=</span> [[n]<span style="color: #333333">*</span>height <span style="color: #008800; font-weight: bold">for</span> n <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(width)] <span style="color: #888888">#defines grid of desired width and height</span>
+    
+    <span style="color: #008800; font-weight: bold">print</span>(grid) <span style="color: #888888">#display the grid</span>
+
+<span style="color: #888888">#### name drawing function</span>
+
+<span style="color: #008800; font-weight: bold">elif</span> functiontype <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;name drawing&quot;</span>: <span style="color: #888888">#provides code for what to do if the user inputs name drawing as what they would like to perform</span>
+
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;enter name: &quot;</span>) <span style="color: #888888">#prompt user to enter their name or string</span>
+    name<span style="color: #333333">=</span><span style="color: #007020">input</span>() <span style="color: #888888">#have the user input their string </span>
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;enter line color&quot;</span>) <span style="color: #888888">#prompt the user to enter their desired line color</span>
+    linecolor<span style="color: #333333">=</span><span style="color: #007020">input</span>() <span style="color: #888888">#have the user enter their line color as input</span>
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;enter background color&quot;</span>) <span style="color: #888888">#prompt the user to enter their desired background color</span>
+    bg_color <span style="color: #333333">=</span> <span style="color: #007020">input</span>() <span style="color: #888888">#have the user enter their line color as input</span>
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;enter width of line:&quot;</span>) <span style="color: #888888">#prompt the user to enter their desired line width</span>
+    width <span style="color: #333333">=</span> <span style="color: #007020">int</span>(<span style="color: #007020">input</span>()) <span style="color: #888888">#have the user enter the width as input</span>
+
+    name_list <span style="color: #333333">=</span> <span style="color: #007020">list</span>(name) <span style="color: #888888">#split out the string input as individual characters</span>
+    <span style="color: #008800; font-weight: bold">print</span> (name_list) <span style="color: #888888">#print the individual characters</span>
+
+    <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">turtle</span> <span style="color: #888888">#import the module turtle</span>
+    turtle<span style="color: #333333">.</span>speed(<span style="color: #0000DD; font-weight: bold">0</span>) <span style="color: #888888">#set the turtle speed to the max speed</span>
+    turtle<span style="color: #333333">.</span>setworldcoordinates(<span style="color: #0000DD; font-weight: bold">0</span>,<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">100</span>,<span style="color: #0000DD; font-weight: bold">1000</span>,<span style="color: #0000DD; font-weight: bold">200</span>) <span style="color: #888888">#set the coordinates of the window</span>
+    turtle<span style="color: #333333">.</span>color(linecolor) <span style="color: #888888">#set the color of the line to the input linecolor</span>
+    turtle<span style="color: #333333">.</span>bgcolor(bg_color) <span style="color: #888888">#set the background color to the users input of the desired background color</span>
+    turtle<span style="color: #333333">.</span>width(width) <span style="color: #888888">#set the width of the line to the users input for width</span>
+
+    <span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> name_list: <span style="color: #888888">#turns each individual character into variable i</span>
+        character<span style="color: #333333">=</span><span style="color: #007020">ord</span>(i) <span style="color: #888888">#turns the individual character into the integer number assigned to that variable</span>
+        <span style="color: #008800; font-weight: bold">if</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">97</span>: <span style="color: #888888">#displays created code for &#39;a&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">98</span>: <span style="color: #888888">#displays created code for &#39;b&#39;</span>
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">99</span>: <span style="color: #888888">#displays created code for &#39;c&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">10</span>)
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">30</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">10</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">100</span>: <span style="color: #888888">#displays created code for &#39;d&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">101</span>: <span style="color: #888888">#displays created code for &#39;e&#39;</span>
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">15</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">15</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">102</span>: <span style="color: #888888">#displays created code for &#39;f&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">70</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">30</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">103</span>: <span style="color: #888888">#displays created code for &#39;g&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">80</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">30</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">104</span>: <span style="color: #888888">#displays created code for &#39;h&#39;</span>
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">30</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">80</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">105</span>: <span style="color: #888888">#displays created code for &#39;i&#39;</span>
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">45</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">15</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">5</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">106</span>: <span style="color: #888888">#displays created code for &#39;j&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">30</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">15</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">5</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">55</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">25</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">107</span>: <span style="color: #888888">#displays created code for &#39;k&#39;</span>
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">70</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">135</span>)
+            turtle<span style="color: #333333">.</span>forward((<span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">**</span> (<span style="color: #333333">-</span><span style="color: #6600EE; font-weight: bold">0.5</span>)) <span style="color: #333333">*</span> <span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward((<span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">**</span> (<span style="color: #333333">-</span><span style="color: #6600EE; font-weight: bold">0.5</span>)) <span style="color: #333333">*</span> <span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward((<span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">**</span> (<span style="color: #333333">-</span><span style="color: #6600EE; font-weight: bold">0.5</span>)) <span style="color: #333333">*</span> <span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">45</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">108</span>: <span style="color: #888888">#displays created code for &#39;l&#39;</span>
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">109</span>: <span style="color: #888888">#displays created code for &#39;m&#39;</span>
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">15</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">10</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">13</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">13</span>)
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">10</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">270</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">35</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">110</span>: <span style="color: #888888">#displays created code for &#39;n&#39;</span>
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">15</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">15</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>right(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">35</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">111</span>: <span style="color: #888888">#displays created code for &#39;o&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>forward(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">112</span>: <span style="color: #888888">#displays created code for &#39;p&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">60</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">80</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">113</span>: <span style="color: #888888">#displays created code for &#39;q&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">10</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">10</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">10</span>, <span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">114</span>: <span style="color: #888888">#displays created code for &#39;r&#39;</span>
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">20</span>,<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">10</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">115</span>: <span style="color: #888888">#displays created code for &#39;s&#39;</span>
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">20</span>, <span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">5</span>)
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">20</span>, <span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">10</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">45</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">20</span>, <span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">5</span>)
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">20</span>, <span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">116</span>: <span style="color: #888888">#displays created code for &#39;t&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">25</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">100</span>)
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">25</span>)
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">117</span>: <span style="color: #888888">#displays created code for &#39;u&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">20</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">118</span>: <span style="color: #888888">#displays created code for &#39;v&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">135</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">3200</span> <span style="color: #333333">**</span> <span style="color: #6600EE; font-weight: bold">0.5</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">3200</span> <span style="color: #333333">**</span> <span style="color: #6600EE; font-weight: bold">0.5</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">45</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">119</span>: <span style="color: #888888">#displays created code for &#39;w&#39;</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">35</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">15</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">10</span>)
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">10</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">15</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">35</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">120</span>: <span style="color: #888888">#displays created code for &#39;x&#39;</span>
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">45</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">5000</span> <span style="color: #333333">**</span> <span style="color: #6600EE; font-weight: bold">0.5</span>)
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">135</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">135</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">5000</span> <span style="color: #333333">**</span> <span style="color: #6600EE; font-weight: bold">0.5</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">45</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">121</span>: <span style="color: #888888">#displays created code for &#39;y&#39;</span>
+            turtle<span style="color: #333333">.</span>left(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">20</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">80</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">40</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>circle(<span style="color: #0000DD; font-weight: bold">20</span>, <span style="color: #0000DD; font-weight: bold">180</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">30</span>)
+            turtle<span style="color: #333333">.</span>rt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">122</span>: <span style="color: #888888">#displays created code for &#39;z&#39;</span>
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">90</span>)
+            turtle<span style="color: #333333">.</span>pd()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>bk(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">45</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">5000</span> <span style="color: #333333">**</span> <span style="color: #6600EE; font-weight: bold">0.5</span>)
+            turtle<span style="color: #333333">.</span>lt(<span style="color: #0000DD; font-weight: bold">135</span>)
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">20</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">elif</span> character <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">32</span>: <span style="color: #888888">#displays created code for a space in the string</span>
+            turtle<span style="color: #333333">.</span>pu()
+            turtle<span style="color: #333333">.</span>fd(<span style="color: #0000DD; font-weight: bold">50</span>)
+            turtle<span style="color: #333333">.</span>pd()
+        <span style="color: #008800; font-weight: bold">else</span>: <span style="color: #888888">#creates code for what to do if anything other than a lowercase number or space is entered into the string</span>
+            <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;unable to read this character, please enter a lowercase alphabetical letter&quot;</span>) <span style="color: #888888">#gives error statement to print in this scenario</span>
+    turtle<span style="color: #333333">.</span>exitonclick() <span style="color: #888888">#allows the program to exit out of the turtle screen with a click from the user</span>
+<span style="color: #008800; font-weight: bold">else</span>: <span style="color: #888888">#provides code for what to do if something other than one of the four desired inputs is entered at the beginning of the function</span>
+   <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;error: unreadable input. Please enter one of the specified inputs at the beginning of the function. Please check spelling and capital/lowercase letters&quot;</span>) <span style="color: #888888">#provides and prints error code </span>
+
+
+<span style="color: #008800; font-weight: bold">print</span> (<span style="background-color: #fff0f0">&quot;THANKYOU, HAVE A NICE DAY&quot;</span>) <span style="color: #888888">#thank user for using program</span>
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&#39;G&#39;</span>)
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&#39;O&#39;</span>)
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&#39;O&#39;</span>)
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&#39;D&#39;</span>)
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&#39;B&#39;</span>)
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&#39;Y&#39;</span>)
+<span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&#39;E&#39;</span>)
+<span style="color: #008800; font-weight: bold">print</span>
+</pre></td></tr></table></div>
