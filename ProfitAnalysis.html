@@ -19,9 +19,12 @@
   <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
   <link rel="stylesheet" href="plugins/animated-text/animated-text.css">
+  <link rel="stylesheet" href="highlight/styles/darkula.css">
+  <script src="highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
   <!-- Main Stylesheet -->
-  <link href="css/portfoliostyle.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 
@@ -63,8 +66,6 @@
   </div>
 </nav>
 <!-- Navigation ENd -->
-
-
 <section class="page-title section pb-0">
   <div class="container">
     <div class="row">
@@ -76,22 +77,17 @@
     </div>
   </div>
 </section>
-
-
 <section class="section portfolio-single">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
 				<img src="images/portfolio/9.jpg" alt="" class="img-fluid w-100">
 			</div>
-
 			<div class="col-lg-6">
 				<div class="project-info">
 					<h3 class="mb-4">Computational Analysis</h3>
 					<p>An elementary Profit Analysis of a potential Betting Platform in its primary stage of development.</p>
-
 					<p>This was a profit analysis created for a client, analyzing a prospective new type of gambling platform. The concept of this platform to create a place where sports bettors could buy sell their bets during live event. Individuals would be able to sell bets to either other sellers or to the site using an "automatic pay" feature. This analysis accounts for the variety of variables at play. It outputs multiple graphs showing the results for the run. It runs the simulation for n number of bets. </p>
-
 							<div class="info">
 								<h5 class="mb-0">Year</h5>
 								<p>2019</p>
@@ -107,9 +103,13 @@
 								<a href="" class="btn btn-main btn-small"  data-toggle="modal" data-target="#myModal">View Code</a>
 							</div>
 						</div>
+                    
+                    <div class="mt-4">
+								<a href="" class="btn btn-main btn-small"  data-toggle="modal1" data-target="#myModal1">View Output</a>
+							</div>
+						</div>
 				
 				
-
 						<!-- Creating Modal -->
 						<div id="myModal" class="modal fade" role="dialog">
   						<div class="modal-dialog modal-lg">
@@ -118,547 +118,438 @@
 							
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">STEREO Quadrature CME Analysis Poster</h4>
+        <h4 class="modal-title">Source Code (MATLAB)</h4>
       </div>
       <div class="modal-body">
-        <div style="background: #272822; overflow:none;width:95%;"><table><tr><td><pre style="margin: 0; line-height: 125%">  1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
- 10
- 11
- 12
- 13
- 14
- 15
- 16
- 17
- 18
- 19
- 20
- 21
- 22
- 23
- 24
- 25
- 26
- 27
- 28
- 29
- 30
- 31
- 32
- 33
- 34
- 35
- 36
- 37
- 38
- 39
- 40
- 41
- 42
- 43
- 44
- 45
- 46
- 47
- 48
- 49
- 50
- 51
- 52
- 53
- 54
- 55
- 56
- 57
- 58
- 59
- 60
- 61
- 62
- 63
- 64
- 65
- 66
- 67
- 68
- 69
- 70
- 71
- 72
- 73
- 74
- 75
- 76
- 77
- 78
- 79
- 80
- 81
- 82
- 83
- 84
- 85
- 86
- 87
- 88
- 89
- 90
- 91
- 92
- 93
- 94
- 95
- 96
- 97
- 98
- 99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265
-266
-267
-268
-269</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">%{</span>
-<span style="color: #75715e">Title: Simulation of Profits for Prospective betting website</span>
-<span style="color: #75715e">Author: Patrick LaChapelle</span>
-<span style="color: #75715e"> Email: patlachapelle3@gmail.com</span>
-<span style="color: #75715e"> Website: patlachapelle.us</span>
-<span style="color: #75715e">Created for: Ricardo Arambula</span>
-<span style="color: #75715e">Date: 13 November, 2018</span>
-<span style="color: #75715e">Description: This is a profit analysis created for a potential new</span>
-<span style="color: #75715e">betting website. This website would use a “stock market” approach</span>
-<span style="color: #75715e">to betting, allowing bettors to buy and sell bets during live games</span>
-<span style="color: #75715e">on the platform. Buyers would be able to interact with a seller</span>
-<span style="color: #75715e">directly or use an “Automatic buy” feature, which guarantees the</span>
-<span style="color: #75715e">site will buy the bet. This profit simulation accounts for a</span>
-<span style="color: #75715e">specific algorithm (ALG_IV) Being tested to determine the value of</span>
-<span style="color: #75715e">the “automatic buy.”</span>
-<span style="color: #75715e">%}</span>
+       <pre>
+       <code class="Matlab" style="white-space:pre-wrap">
+clear all
+close all
+n=100; 
+ploss = zeros(1,n);
+paymat = zeros(1,n);
+costmat = zeros(1,n);
+bamount = zeros(1,n);
+swins = zeros(1,n);
+odds22 = zeros(1,n);
+odds11 = zeros(1,n);
+result = zeros(1,n);
+odds44 = zeros(1,n);
+sperc = zeros(1,n);
+percwin = zeros(1,n);
+%setting empty smoothing functions
+smoothodds22 = zeros(1,n);
+smoothploss = zeros(1,n);
+smoothpaymat = zeros(1,n);
+smoothcostmat = zeros(1,n);
+smoothbamount = zeros(1,n);
+smoothswins = zeros(1,n);
+smoothodds11 = zeros(1,n);
+smoothresult = zeros(1,n);
+smoothsperc = zeros(1,n);
+smoothpercwin = zeros(1,n);
 
-<span style="color: #75715e">%Begin Simulation</span>
-<span style="color: #75715e">%Clear previous runs</span>
+for z = 1:n
+    %values for determining nodds
+    a = randi(2);
+if a == 1
+    b = -1;
+else
+    b = 1;
+end
+d = randi(10);
+e = randi(2);
+if e == 1
+    f = -1;
+else
+    f = 1;
+end
+g = randi(10);
+%establishing the price of initial sale
+%establishing values of necessary variables
 
-<span style="color: #f8f8f2">clear</span> <span style="color: #f8f8f2">all</span>
-<span style="color: #f8f8f2">close</span> <span style="color: #f8f8f2">all</span>
+bet=(100)*rand;
+odds = b*d*100;
+nodds = f*g*100;
+saletype = 2;
 
-<span style="color: #75715e">%Set n (n = number of bets being made)</span>
+% defining variable constants 
 
-<span style="color: #f8f8f2">n=</span><span style="color: #ae81ff">10000</span><span style="color: #f8f8f2">;</span>
+r = 0.01;
 
-<span style="color: #75715e">%set variables</span>
+%Changing odds from 100s values to computable decimal probabilities
 
-<span style="color: #f8f8f2">ploss</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
-<span style="color: #f8f8f2">paymat</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
-<span style="color: #f8f8f2">costmat</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
-<span style="color: #f8f8f2">bamount</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
-<span style="color: #f8f8f2">swins</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
-<span style="color: #f8f8f2">odds22</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
-<span style="color: #f8f8f2">odds11</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
-<span style="color: #f8f8f2">result</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
-<span style="color: #f8f8f2">odds44</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
-<span style="color: #f8f8f2">sperc</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
-<span style="color: #f8f8f2">percwin</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+if odds > 0
+    odds1 = odds/100;
+else 
+    odds1 = 100/(abs(odds));
+end
 
-<span style="color: #75715e">%Determine values for “new odds”</span>
-<span style="color: #75715e">%Must vary this parameter for accurate simulations</span>
+if nodds > 0
+    odds2 = nodds/100;
+else 
+    odds2 = 100/(abs(nodds));
+end
 
-<span style="color: #75715e">%Create “randomness”</span>
+%calculating the potential win amount
 
-<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">z</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:n</span>
- <span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">randi(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">);</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">a</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
- <span style="color: #f8f8f2">b</span> <span style="color: #f8f8f2">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">b</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">end</span>
-<span style="color: #f8f8f2">d</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">randi(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">e</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">randi(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">);</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">e</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
- <span style="color: #f8f8f2">f</span> <span style="color: #f8f8f2">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">f</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">end</span>
-<span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">randi(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
+pwin = bet+bet*odds1;
 
-<span style="color: #75715e">%establishing the price of initial sale</span>
-<span style="color: #75715e">%establishing values of necessary variables</span>
+%finding the cost equation
+%cost equation constants
+%constant for 3rd party
+k1=0.5;
+%constant for guaranteed buy
+k2 = 0.9;
 
-<span style="color: #f8f8f2">bet</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">(</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">rand;</span>
-<span style="color: #f8f8f2">odds</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">b</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">d</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">nodds</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">f</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">g</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">saletype</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">;</span>
+%run loop
+for i = 1:length(k2)
+    %if then statements determining k according to sale type
 
-<span style="color: #75715e">% defining variable constants</span>
+    if saletype == 1
+    k = k1;
+elseif saletype == 2
+    k=k2;
+else
+    fprintf("ERROR: Invalid input for sale type")
+end
 
-<span style="color: #f8f8f2">r</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">0.01</span><span style="color: #f8f8f2">;</span>
+cost = (bet*(1+odds1))/(k*(odds2+1));
 
-<span style="color: #75715e">%Changing odds from 100s values to </span>
-<span style="color: #f8f8f2">computable</span> <span style="color: #f8f8f2">decimal</span> <span style="color: #f8f8f2">probabilities</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">odds</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">0</span>
- <span style="color: #f8f8f2">odds1</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">odds</span><span style="color: #f92672">/</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">odds1</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">100</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">(abs(odds));</span>
-<span style="color: #66d9ef">end</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">nodds</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">0</span>
- <span style="color: #f8f8f2">odds2</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">nodds</span><span style="color: #f92672">/</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">odds2</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">100</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">(abs(nodds));</span>
-<span style="color: #66d9ef">end</span>
+%calculating what the buyer pays
 
-<span style="color: #75715e">%calculating the potential win amount</span>
+buyerpays = cost*r+cost;
 
-<span style="color: #f8f8f2">pwin</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">bet</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">bet</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">odds1;</span>
+%calculating new odds for buyer
 
-<span style="color: #75715e">%finding the cost equation</span>
-<span style="color: #75715e">%cost equation constants</span>
-<span style="color: #75715e">%constant for 3rd party</span>
+if cost <= pwin
+    odds3 = 100*pwin/buyerpays;
+else
+    odds3 = buyerpays*100/pwin;
+end
 
-<span style="color: #f8f8f2">k1=</span><span style="color: #ae81ff">0.5</span><span style="color: #f8f8f2">;</span>
+%output for part 1 (cost equation)
 
-<span style="color: #75715e">%constant for guaranteed buy</span>
+% if saletype == 1
+%     fprintf("seller gets: ")
+%     disp(cost);
+%     fprintf("Buyer pays: ")
+%     disp(buyerpays);
+%     fprintf("New odds for the buyer are: ")
+%     disp(odds3)
+% end
 
-<span style="color: #f8f8f2">k2</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">0.6</span><span style="color: #f8f8f2">;</span>
+%CALCULATING NET PROFIT FOR SITE
 
-<span style="color: #75715e">%run loop</span>
+%setting variables for profit equations
 
-<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:length(k2)</span>
+sp1 = 25;
+sp =(rand)*0.8;
+kp = 1-sp;
+h = randi(4);
+if h == 1
+    br = 1;
+else
+    br = 2;
+end
 
-<span style="color: #75715e">%if then statements determining k according to sale type</span>
+%calculate selling statistics
 
-<span style="color: #75715e">%allows for greater level of randomness</span>
+sprice = 2*cost;
+%odds for buyer on site
+if sprice >= pwin
+    odds4 = -(sprice*100)/pwin;
+else
+    odds4 = (pwin*100)/sprice;
+end
+if nodds >= odds4-200
+    odds4 = nodds+200;
+    if sprice>pwin
+        sprice = pwin*(nodds+100)/100;
+    else
+        sprice = (100*pwin)/(nodds+100);
+    end
+else
+    odds4 = odds4;
+end
 
- <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">saletype</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
- <span style="color: #f8f8f2">k</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">k1;</span>
-<span style="color: #66d9ef">elseif</span> <span style="color: #f8f8f2">saletype</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">2</span>
- <span style="color: #f8f8f2">k=k2;</span>
-<span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">fprintf(</span>&quot;<span style="color: #f8f8f2">ERROR:</span> <span style="color: #f8f8f2">Invalid</span> <span style="color: #f8f8f2">input</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">sale</span> <span style="color: #f8f8f2">type</span>&quot;<span style="color: #f8f8f2">)</span>
-<span style="color: #66d9ef">end</span>
+%calculating profits
 
-<span style="color: #f8f8f2">cost</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">(bet</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">1</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">odds1))</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">(k</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">(odds2</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">));</span>
+profit1 = r*cost;
+profit2 = sp*sprice;
+%assigning values for profit3 according to win v. lose
+if br == 1
+    profit3 = kp*pwin;
+elseif br == 2
+    profit3 = -kp*cost;
+else
+    fprintf("ERROR: invalid entry for result of bet, please enter 1 or 2")
+end
+%calculating net profit
+if saletype == 1
+    netprofit = profit1;
+else
+    netprofit = profit2+profit3;
+end
 
-<span style="color: #75715e">%calculating what the buyer pays</span>
+end
+result(1,z)=netprofit;
+paymat(1,z)=buyerpays;
+costmat(1,z)=cost;
+bamount(1,z)=bet;
+swins(1,z)=pwin;
+odds22(1,z)=nodds;
+odds11(1,z)=odds1;
+sperc(1,z)=sp*100;
+odds44(1,z)=odds4;
+ploss(1,z)=-bet;
+percwin(1,z)=(netprofit/cost)*100;
+c = zeros(1,n);
+smoothc = zeros(1,n);
+c(1,1) = result(1,1);
+for j = 2:n
+    c(1,j) = result(1,j)+c(1,j-1);
+end
+end
+%End Simulation
+%--------------------------------------
+%--------------------------------------
+%--------------------------------------
+%Smoothing functions
 
-<span style="color: #f8f8f2">buyerpays</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">cost</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">r</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">cost;</span>
+%smooth c
+smoothc(1,1)=c(1,1);
+smoothc(1,2)=(1/2)*(c(1,1)+c(1,2));
+smoothc(1,3)=(1/3)*(c(1,1)+c(1,2)+c(1,3));
+smoothc(1,4)=(1/4)*(c(1,1)+c(1,2)+c(1,3)+c(1,4));
+smoothc(1,5)=(1/5)*(c(1,1)+c(1,2)+c(1,3)+c(1,4)+c(1,5));
+smoothc(1,6)=(1/6)*(c(1,1)+c(1,2)+c(1,3)+c(1,4)+c(1,5)+c(1,6));
+smoothc(1,7)=(1/7)*(c(1,1)+c(1,2)+c(1,3)+c(1,4)+c(1,5)+c(1,6)+c(1,7));
+smoothc(1,8)=(1/8)*(c(1,1)+c(1,2)+c(1,3)+c(1,4)+c(1,5)+c(1,6)+c(1,7)+c(1,8));
+smoothc(1,9)=(1/9)*(c(1,1)+c(1,2)+c(1,3)+c(1,4)+c(1,5)+c(1,6)+c(1,7)+c(1,8)+c(1,9));
+smoothc(1,10)=(1/9)*(c(1,1)+c(1,2)+c(1,3)+c(1,4)+c(1,5)+c(1,6)+c(1,7)+c(1,8)+c(1,9)+c(1,10));
+for j = 11:n
+    smoothc(1,j)=(1/10)*(c(1,j)+c(1,j-1)+c(1,j-2)+c(1,j-3)+c(1,j-4)+c(1,j-5)+c(1,j-6)+c(1,j-7)+c(1,j-8)+c(1,j-9)+c(1,j-10));
+end
 
-<span style="color: #75715e">%calculating new odds for buyer</span>
+%smooth percwin
+smoothpercwin(1,1)=percwin(1,1);
+smoothpercwin(1,2)=(1/2)*(percwin(1,1)+percwin(1,2));
+smoothpercwin(1,3)=(1/3)*(percwin(1,1)+percwin(1,2)+percwin(1,3));
+smoothpercwin(1,4)=(1/4)*(percwin(1,1)+percwin(1,2)+percwin(1,3)+percwin(1,4));
+smoothpercwin(1,5)=(1/5)*(percwin(1,1)+percwin(1,2)+percwin(1,3)+percwin(1,4)+percwin(1,5));
+smoothpercwin(1,6)=(1/6)*(percwin(1,1)+percwin(1,2)+percwin(1,3)+percwin(1,4)+percwin(1,5)+percwin(1,6));
+smoothpercwin(1,7)=(1/7)*(percwin(1,1)+percwin(1,2)+percwin(1,3)+percwin(1,4)+percwin(1,5)+percwin(1,6)+percwin(1,7));
+smoothpercwin(1,8)=(1/8)*(percwin(1,1)+percwin(1,2)+percwin(1,3)+percwin(1,4)+percwin(1,5)+percwin(1,6)+percwin(1,7)+percwin(1,8));
+smoothpercwin(1,9)=(1/9)*(percwin(1,1)+percwin(1,2)+percwin(1,3)+percwin(1,4)+percwin(1,5)+percwin(1,6)+percwin(1,7)+percwin(1,8)+percwin(1,9));
+smoothpercwin(1,10)=(1/9)*(percwin(1,1)+percwin(1,2)+percwin(1,3)+percwin(1,4)+percwin(1,5)+percwin(1,6)+percwin(1,7)+percwin(1,8)+percwin(1,9)+percwin(1,10));
+for j = 11:n
+    smoothpercwin(1,j)=(1/10)*(percwin(1,j)+percwin(1,j-1)+percwin(1,j-2)+percwin(1,j-3)+percwin(1,j-4)+percwin(1,j-5)+percwin(1,j-6)+percwin(1,j-7)+percwin(1,j-8)+percwin(1,j-9)+percwin(1,j-10));
+end
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">cost</span> <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">pwin</span>
- <span style="color: #f8f8f2">odds3</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">100</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">pwin</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">buyerpays;</span>
-<span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">odds3</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">buyerpays</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">pwin;</span>
-<span style="color: #66d9ef">end</span>
+%smooth sperc
+smoothsperc(1,1)=sperc(1,1);
+smoothsperc(1,2)=(1/2)*(sperc(1,1)+sperc(1,2));
+smoothsperc(1,3)=(1/3)*(sperc(1,1)+sperc(1,2)+sperc(1,3));
+smoothsperc(1,4)=(1/4)*(sperc(1,1)+sperc(1,2)+sperc(1,3)+sperc(1,4));
+smoothsperc(1,5)=(1/5)*(sperc(1,1)+sperc(1,2)+sperc(1,3)+sperc(1,4)+sperc(1,5));
+smoothsperc(1,6)=(1/6)*(sperc(1,1)+sperc(1,2)+sperc(1,3)+sperc(1,4)+sperc(1,5)+sperc(1,6));
+smoothsperc(1,7)=(1/7)*(sperc(1,1)+sperc(1,2)+sperc(1,3)+sperc(1,4)+sperc(1,5)+sperc(1,6)+sperc(1,7));
+smoothsperc(1,8)=(1/8)*(sperc(1,1)+sperc(1,2)+sperc(1,3)+sperc(1,4)+sperc(1,5)+sperc(1,6)+sperc(1,7)+sperc(1,8));
+smoothsperc(1,9)=(1/9)*(sperc(1,1)+sperc(1,2)+sperc(1,3)+sperc(1,4)+sperc(1,5)+sperc(1,6)+sperc(1,7)+sperc(1,8)+sperc(1,9));
+smoothsperc(1,10)=(1/9)*(sperc(1,1)+sperc(1,2)+sperc(1,3)+sperc(1,4)+sperc(1,5)+sperc(1,6)+sperc(1,7)+sperc(1,8)+sperc(1,9)+sperc(1,10));
+for j = 11:n
+    smoothsperc(1,j)=(1/10)*(sperc(1,j)+sperc(1,j-1)+sperc(1,j-2)+sperc(1,j-3)+sperc(1,j-4)+sperc(1,j-5)+sperc(1,j-6)+sperc(1,j-7)+sperc(1,j-8)+sperc(1,j-9)+sperc(1,j-10));
+end
 
-<span style="color: #75715e">%output for part 1 (cost equation)</span>
+%Smooth ploss
+smoothploss(1,1)=ploss(1,1);
+smoothploss(1,2)=(1/2)*(ploss(1,1)+ploss(1,2));
+smoothploss(1,3)=(1/3)*(ploss(1,1)+ploss(1,2)+ploss(1,3));
+smoothploss(1,4)=(1/4)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4));
+smoothploss(1,5)=(1/5)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5));
+smoothploss(1,6)=(1/6)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5)+ploss(1,6));
+smoothploss(1,7)=(1/7)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5)+ploss(1,6)+ploss(1,7));
+smoothploss(1,8)=(1/8)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5)+ploss(1,6)+ploss(1,7)+ploss(1,8));
+smoothploss(1,9)=(1/9)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5)+ploss(1,6)+ploss(1,7)+ploss(1,8)+ploss(1,9));
+smoothploss(1,10)=(1/9)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5)+ploss(1,6)+ploss(1,7)+ploss(1,8)+ploss(1,9)+ploss(1,10));
+for j = 11:n
+    smoothploss(1,j)=(1/10)*(ploss(1,j)+ploss(1,j-1)+ploss(1,j-2)+ploss(1,j-3)+ploss(1,j-4)+ploss(1,j-5)+ploss(1,j-6)+ploss(1,j-7)+ploss(1,j-8)+ploss(1,j-9)+ploss(1,j-10));
+end
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">saletype</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
-<span style="color: #f8f8f2">fprintf(</span>&quot;<span style="color: #f8f8f2">seller</span> <span style="color: #f8f8f2">gets:</span> &quot;<span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">disp(cost);</span>
-<span style="color: #f8f8f2">fprintf(</span>&quot;<span style="color: #f8f8f2">Buyer</span> <span style="color: #f8f8f2">pays:</span> &quot;<span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">disp(buyerpays);</span>
-<span style="color: #f8f8f2">fprintf(</span>&quot;<span style="color: #f8f8f2">New</span> <span style="color: #f8f8f2">odds</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">buyer</span> <span style="color: #f8f8f2">are:</span> &quot;<span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">disp(odds3)</span>
-<span style="color: #66d9ef">end</span>
+%Smooth odds11
+smoothodds11(1,1)=odds11(1,1);
+smoothodds11(1,2)=(1/2)*(odds11(1,1)+odds11(1,2));
+smoothodds11(1,3)=(1/3)*(odds11(1,1)+odds11(1,2)+odds11(1,3));
+smoothodds11(1,4)=(1/4)*(odds11(1,1)+odds11(1,2)+odds11(1,3)+odds11(1,4));
+smoothodds11(1,5)=(1/5)*(odds11(1,1)+odds11(1,2)+odds11(1,3)+odds11(1,4)+odds11(1,5));
+smoothodds11(1,6)=(1/6)*(odds11(1,1)+odds11(1,2)+odds11(1,3)+odds11(1,4)+odds11(1,5)+odds11(1,6));
+smoothodds11(1,7)=(1/7)*(odds11(1,1)+odds11(1,2)+odds11(1,3)+odds11(1,4)+odds11(1,5)+odds11(1,6)+odds11(1,7));
+smoothodds11(1,8)=(1/8)*(odds11(1,1)+odds11(1,2)+odds11(1,3)+odds11(1,4)+odds11(1,5)+odds11(1,6)+odds11(1,7)+odds11(1,8));
+smoothodds11(1,9)=(1/9)*(odds11(1,1)+odds11(1,2)+odds11(1,3)+odds11(1,4)+odds11(1,5)+odds11(1,6)+odds11(1,7)+odds11(1,8)+odds11(1,9));
+smoothodds11(1,10)=(1/9)*(odds11(1,1)+odds11(1,2)+odds11(1,3)+odds11(1,4)+odds11(1,5)+odds11(1,6)+odds11(1,7)+odds11(1,8)+odds11(1,9)+odds11(1,10));
+for j = 11:n
+    smoothodds11(1,j)=(1/10)*(odds11(1,j)+odds11(1,j-1)+odds11(1,j-2)+odds11(1,j-3)+odds11(1,j-4)+odds11(1,j-5)+odds11(1,j-6)+odds11(1,j-7)+odds11(1,j-8)+odds11(1,j-9)+odds11(1,j-10));
+end
 
-<span style="color: #75715e">%CALCULATING NET PROFIT FOR SITE</span>
-<span style="color: #75715e">%setting variables for profit equations</span>
+%smooth swins
+smoothswins(1,1)=swins(1,1);
+smoothswins(1,2)=(1/2)*(swins(1,1)+swins(1,2));
+smoothswins(1,3)=(1/3)*(swins(1,1)+swins(1,2)+swins(1,3));
+smoothswins(1,4)=(1/4)*(swins(1,1)+swins(1,2)+swins(1,3)+swins(1,4));
+smoothswins(1,5)=(1/5)*(swins(1,1)+swins(1,2)+swins(1,3)+swins(1,4)+swins(1,5));
+smoothswins(1,6)=(1/6)*(swins(1,1)+swins(1,2)+swins(1,3)+swins(1,4)+swins(1,5)+swins(1,6));
+smoothswins(1,7)=(1/7)*(swins(1,1)+swins(1,2)+swins(1,3)+swins(1,4)+swins(1,5)+swins(1,6)+swins(1,7));
+smoothswins(1,8)=(1/8)*(swins(1,1)+swins(1,2)+swins(1,3)+swins(1,4)+swins(1,5)+swins(1,6)+swins(1,7)+swins(1,8));
+smoothswins(1,9)=(1/9)*(swins(1,1)+swins(1,2)+swins(1,3)+swins(1,4)+swins(1,5)+swins(1,6)+swins(1,7)+swins(1,8)+swins(1,9));
+smoothswins(1,10)=(1/9)*(swins(1,1)+swins(1,2)+swins(1,3)+swins(1,4)+swins(1,5)+swins(1,6)+swins(1,7)+swins(1,8)+swins(1,9)+swins(1,10));
+for j = 11:n
+    smoothswins(1,j)=(1/10)*(swins(1,j)+swins(1,j-1)+swins(1,j-2)+swins(1,j-3)+swins(1,j-4)+swins(1,j-5)+swins(1,j-6)+swins(1,j-7)+swins(1,j-8)+swins(1,j-9)+swins(1,j-10));
+end
 
-<span style="color: #f8f8f2">sp1</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">25</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">sp</span> <span style="color: #f8f8f2">=(rand)</span><span style="color: #f92672">*</span><span style="color: #ae81ff">0.8</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">kp</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">sp;</span>
-<span style="color: #f8f8f2">h</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">randi(</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">h</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
- <span style="color: #f8f8f2">br</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">br</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">end</span>
+%Smooth bamount
+smoothbamount(1,1)=bamount(1,1);
+smoothbamount(1,2)=(1/2)*(bamount(1,1)+bamount(1,2));
+smoothbamount(1,3)=(1/3)*(bamount(1,1)+bamount(1,2)+bamount(1,3));
+smoothbamount(1,4)=(1/4)*(bamount(1,1)+bamount(1,2)+bamount(1,3)+bamount(1,4));
+smoothbamount(1,5)=(1/5)*(bamount(1,1)+bamount(1,2)+bamount(1,3)+bamount(1,4)+bamount(1,5));
+smoothbamount(1,6)=(1/6)*(bamount(1,1)+bamount(1,2)+bamount(1,3)+bamount(1,4)+bamount(1,5)+bamount(1,6));
+smoothbamount(1,7)=(1/7)*(bamount(1,1)+bamount(1,2)+bamount(1,3)+bamount(1,4)+bamount(1,5)+bamount(1,6)+bamount(1,7));
+smoothbamount(1,8)=(1/8)*(bamount(1,1)+bamount(1,2)+bamount(1,3)+bamount(1,4)+bamount(1,5)+bamount(1,6)+bamount(1,7)+bamount(1,8));
+smoothbamount(1,9)=(1/9)*(bamount(1,1)+bamount(1,2)+bamount(1,3)+bamount(1,4)+bamount(1,5)+bamount(1,6)+bamount(1,7)+bamount(1,8)+bamount(1,9));
+smoothbamount(1,10)=(1/9)*(bamount(1,1)+bamount(1,2)+bamount(1,3)+bamount(1,4)+bamount(1,5)+bamount(1,6)+bamount(1,7)+bamount(1,8)+bamount(1,9)+bamount(1,10));
+for j = 11:n
+    smoothbamount(1,j)=(1/10)*(bamount(1,j)+bamount(1,j-1)+bamount(1,j-2)+bamount(1,j-3)+bamount(1,j-4)+bamount(1,j-5)+bamount(1,j-6)+bamount(1,j-7)+bamount(1,j-8)+bamount(1,j-9)+bamount(1,j-10));
+end
 
-<span style="color: #75715e">%calculate selling statistics</span>
+%Smooth costmat
+smoothcostmat(1,1)=costmat(1,1);
+smoothcostmat(1,2)=(1/2)*(costmat(1,1)+costmat(1,2));
+smoothcostmat(1,3)=(1/3)*(costmat(1,1)+costmat(1,2)+costmat(1,3));
+smoothcostmat(1,4)=(1/4)*(costmat(1,1)+costmat(1,2)+costmat(1,3)+costmat(1,4));
+smoothcostmat(1,5)=(1/5)*(costmat(1,1)+costmat(1,2)+costmat(1,3)+costmat(1,4)+costmat(1,5));
+smoothcostmat(1,6)=(1/6)*(costmat(1,1)+costmat(1,2)+costmat(1,3)+costmat(1,4)+costmat(1,5)+costmat(1,6));
+smoothcostmat(1,7)=(1/7)*(costmat(1,1)+costmat(1,2)+costmat(1,3)+costmat(1,4)+costmat(1,5)+costmat(1,6)+costmat(1,7));
+smoothcostmat(1,8)=(1/8)*(costmat(1,1)+costmat(1,2)+costmat(1,3)+costmat(1,4)+costmat(1,5)+costmat(1,6)+costmat(1,7)+costmat(1,8));
+smoothcostmat(1,9)=(1/9)*(costmat(1,1)+costmat(1,2)+costmat(1,3)+costmat(1,4)+costmat(1,5)+costmat(1,6)+costmat(1,7)+costmat(1,8)+costmat(1,9));
+smoothcostmat(1,10)=(1/9)*(costmat(1,1)+costmat(1,2)+costmat(1,3)+costmat(1,4)+costmat(1,5)+costmat(1,6)+costmat(1,7)+costmat(1,8)+costmat(1,9)+costmat(1,10));
+for j = 11:n
+    smoothcostmat(1,j)=(1/10)*(costmat(1,j)+costmat(1,j-1)+costmat(1,j-2)+costmat(1,j-3)+costmat(1,j-4)+costmat(1,j-5)+costmat(1,j-6)+costmat(1,j-7)+costmat(1,j-8)+costmat(1,j-9)+costmat(1,j-10));
+end
 
-<span style="color: #f8f8f2">sprice</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">2</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">cost;</span>
+%Smooth Result
+smoothresult(1,1)=result(1,1);
+smoothresult(1,2)=(1/2)*(result(1,1)+result(1,2));
+smoothresult(1,3)=(1/3)*(result(1,1)+result(1,2)+result(1,3));
+smoothresult(1,4)=(1/4)*(result(1,1)+result(1,2)+result(1,3)+result(1,4));
+smoothresult(1,5)=(1/5)*(result(1,1)+result(1,2)+result(1,3)+result(1,4)+result(1,5));
+smoothresult(1,6)=(1/6)*(result(1,1)+result(1,2)+result(1,3)+result(1,4)+result(1,5)+result(1,6));
+smoothresult(1,7)=(1/7)*(result(1,1)+result(1,2)+result(1,3)+result(1,4)+result(1,5)+result(1,6)+result(1,7));
+smoothresult(1,8)=(1/8)*(result(1,1)+result(1,2)+result(1,3)+result(1,4)+result(1,5)+result(1,6)+result(1,7)+result(1,8));
+smoothresult(1,9)=(1/9)*(result(1,1)+result(1,2)+result(1,3)+result(1,4)+result(1,5)+result(1,6)+result(1,7)+result(1,8)+result(1,9));
+smoothresult(1,10)=(1/9)*(result(1,1)+result(1,2)+result(1,3)+result(1,4)+result(1,5)+result(1,6)+result(1,7)+result(1,8)+result(1,9)+result(1,10));
+for j = 11:n
+    smoothresult(1,j)=(1/10)*(result(1,j)+result(1,j-1)+result(1,j-2)+result(1,j-3)+result(1,j-4)+result(1,j-5)+result(1,j-6)+result(1,j-7)+result(1,j-8)+result(1,j-9)+result(1,j-10));
+end
 
-<span style="color: #75715e">%odds for buyer on site</span>
+%smooth paymat
+smoothpaymat(1,1)=paymat(1,1);
+smoothpaymat(1,2)=(1/2)*(paymat(1,1)+paymat(1,2));
+smoothpaymat(1,3)=(1/3)*(paymat(1,1)+paymat(1,2)+paymat(1,3));
+smoothpaymat(1,4)=(1/4)*(paymat(1,1)+paymat(1,2)+paymat(1,3)+paymat(1,4));
+smoothpaymat(1,5)=(1/5)*(paymat(1,1)+paymat(1,2)+paymat(1,3)+paymat(1,4)+paymat(1,5));
+smoothpaymat(1,6)=(1/6)*(paymat(1,1)+paymat(1,2)+paymat(1,3)+paymat(1,4)+paymat(1,5)+paymat(1,6));
+smoothpaymat(1,7)=(1/7)*(paymat(1,1)+paymat(1,2)+paymat(1,3)+paymat(1,4)+paymat(1,5)+paymat(1,6)+paymat(1,7));
+smoothpaymat(1,8)=(1/8)*(paymat(1,1)+paymat(1,2)+paymat(1,3)+paymat(1,4)+paymat(1,5)+paymat(1,6)+paymat(1,7)+paymat(1,8));
+smoothpaymat(1,9)=(1/9)*(paymat(1,1)+paymat(1,2)+paymat(1,3)+paymat(1,4)+paymat(1,5)+paymat(1,6)+paymat(1,7)+paymat(1,8)+paymat(1,9));
+smoothpaymat(1,10)=(1/9)*(paymat(1,1)+paymat(1,2)+paymat(1,3)+paymat(1,4)+paymat(1,5)+paymat(1,6)+paymat(1,7)+paymat(1,8)+paymat(1,9)+paymat(1,10));
+for j = 11:n
+    smoothpaymat(1,j)=(1/10)*(paymat(1,j)+paymat(1,j-1)+paymat(1,j-2)+paymat(1,j-3)+paymat(1,j-4)+paymat(1,j-5)+paymat(1,j-6)+paymat(1,j-7)+paymat(1,j-8)+paymat(1,j-9)+paymat(1,j-10));
+end
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">sprice</span> <span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">pwin</span>
- <span style="color: #f8f8f2">odds4</span> <span style="color: #f8f8f2">=</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">(sprice</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">pwin;</span>
-<span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">odds4</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">(pwin</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">sprice;</span>
-<span style="color: #66d9ef">end</span>
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">nodds</span> <span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">odds4</span><span style="color: #f92672">-</span><span style="color: #ae81ff">100</span>
- <span style="color: #f8f8f2">odds4</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">nodds</span><span style="color: #f92672">+</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
- <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">sprice</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">pwin</span>
- <span style="color: #f8f8f2">sprice</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">pwin</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">(nodds</span><span style="color: #f92672">+</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">/</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
- <span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">sprice</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">(</span><span style="color: #ae81ff">100</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">pwin)</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">(nodds</span><span style="color: #f92672">+</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">);</span>
- <span style="color: #66d9ef">end</span>
-<span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">odds4</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">odds4;</span>
-<span style="color: #66d9ef">end</span>
+%Smooth Odds22
+smoothodds22(1,1)=odds22(1,1);
+smoothodds22(1,2)=(1/2)*(odds22(1,1)+odds22(1,2));
+smoothodds22(1,3)=(1/3)*(odds22(1,1)+odds22(1,2)+odds22(1,3));
+smoothodds22(1,4)=(1/4)*(odds22(1,1)+odds22(1,2)+odds22(1,3)+odds22(1,4));
+smoothodds22(1,5)=(1/5)*(odds22(1,1)+odds22(1,2)+odds22(1,3)+odds22(1,4)+odds22(1,5));
+smoothodds22(1,6)=(1/6)*(odds22(1,1)+odds22(1,2)+odds22(1,3)+odds22(1,4)+odds22(1,5)+odds22(1,6));
+smoothodds22(1,7)=(1/7)*(odds22(1,1)+odds22(1,2)+odds22(1,3)+odds22(1,4)+odds22(1,5)+odds22(1,6)+odds22(1,7));
+smoothodds22(1,8)=(1/8)*(odds22(1,1)+odds22(1,2)+odds22(1,3)+odds22(1,4)+odds22(1,5)+odds22(1,6)+odds22(1,7)+odds22(1,8));
+smoothodds22(1,9)=(1/9)*(odds22(1,1)+odds22(1,2)+odds22(1,3)+odds22(1,4)+odds22(1,5)+odds22(1,6)+odds22(1,7)+odds22(1,8)+odds22(1,9));
+smoothodds22(1,10)=(1/9)*(odds22(1,1)+odds22(1,2)+odds22(1,3)+odds22(1,4)+odds22(1,5)+odds22(1,6)+odds22(1,7)+odds22(1,8)+odds22(1,9)+odds22(1,10));
+for j = 11:n
+    smoothodds22(1,j)=(1/10)*(odds22(1,j)+odds22(1,j-1)+odds22(1,j-2)+odds22(1,j-3)+odds22(1,j-4)+odds22(1,j-5)+odds22(1,j-6)+odds22(1,j-7)+odds22(1,j-8)+odds22(1,j-9)+odds22(1,j-10));
+end
 
-<span style="color: #75715e">%calculating profits</span>
 
-<span style="color: #f8f8f2">profit1</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">r</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">cost;</span>
-<span style="color: #f8f8f2">profit2</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">sp</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">sprice;</span>
+%Smooth odds44
+smoothodds44(1,1)=odds44(1,1);
+smoothodds44(1,2)=(1/2)*(odds44(1,1)+odds44(1,2));
+smoothodds44(1,3)=(1/3)*(odds44(1,1)+odds44(1,2)+odds44(1,3));
+smoothodds44(1,4)=(1/4)*(odds44(1,1)+odds44(1,2)+odds44(1,3)+odds44(1,4));
+smoothodds44(1,5)=(1/5)*(odds44(1,1)+odds44(1,2)+odds44(1,3)+odds44(1,4)+odds44(1,5));
+smoothodds44(1,6)=(1/6)*(odds44(1,1)+odds44(1,2)+odds44(1,3)+odds44(1,4)+odds44(1,5)+odds44(1,6));
+smoothodds44(1,7)=(1/7)*(odds44(1,1)+odds44(1,2)+odds44(1,3)+odds44(1,4)+odds44(1,5)+odds44(1,6)+odds44(1,7));
+smoothodds44(1,8)=(1/8)*(odds44(1,1)+odds44(1,2)+odds44(1,3)+odds44(1,4)+odds44(1,5)+odds44(1,6)+odds44(1,7)+odds44(1,8));
+smoothodds44(1,9)=(1/9)*(odds44(1,1)+odds44(1,2)+odds44(1,3)+odds44(1,4)+odds44(1,5)+odds44(1,6)+odds44(1,7)+odds44(1,8)+odds44(1,9));
+smoothodds44(1,10)=(1/9)*(odds44(1,1)+odds44(1,2)+odds44(1,3)+odds44(1,4)+odds44(1,5)+odds44(1,6)+odds44(1,7)+odds44(1,8)+odds44(1,9)+odds44(1,10));
+for j = 11:n
+    smoothodds44(1,j)=(1/10)*(odds44(1,j)+odds44(1,j-1)+odds44(1,j-2)+odds44(1,j-3)+odds44(1,j-4)+odds44(1,j-5)+odds44(1,j-6)+odds44(1,j-7)+odds44(1,j-8)+odds44(1,j-9)+odds44(1,j-10));
+end
 
-<span style="color: #75715e">%assigning values for profit3 according to </span>
-<span style="color: #f8f8f2">win</span> <span style="color: #f8f8f2">v.</span> <span style="color: #f8f8f2">lose</span>
+%smooth ploss
+smoothploss(1,1)=ploss(1,1);
+smoothploss(1,2)=(1/2)*(ploss(1,1)+ploss(1,2));
+smoothploss(1,3)=(1/3)*(ploss(1,1)+ploss(1,2)+ploss(1,3));
+smoothploss(1,4)=(1/4)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4));
+smoothploss(1,5)=(1/5)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5));
+smoothploss(1,6)=(1/6)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5)+ploss(1,6));
+smoothploss(1,7)=(1/7)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5)+ploss(1,6)+ploss(1,7));
+smoothploss(1,8)=(1/8)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5)+ploss(1,6)+ploss(1,7)+ploss(1,8));
+smoothploss(1,9)=(1/9)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5)+ploss(1,6)+ploss(1,7)+ploss(1,8)+ploss(1,9));
+smoothploss(1,10)=(1/9)*(ploss(1,1)+ploss(1,2)+ploss(1,3)+ploss(1,4)+ploss(1,5)+ploss(1,6)+ploss(1,7)+ploss(1,8)+ploss(1,9)+ploss(1,10));
+for j = 11:n
+    smoothploss(1,j)=(1/10)*(ploss(1,j)+ploss(1,j-1)+ploss(1,j-2)+ploss(1,j-3)+ploss(1,j-4)+ploss(1,j-5)+ploss(1,j-6)+ploss(1,j-7)+ploss(1,j-8)+ploss(1,j-9)+ploss(1,j-10));
+end
+%End Smoothing Functions
+%--------------------------------------
+%--------------------------------------
+%--------------------------------------
+%Begin Plots
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">br</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
- <span style="color: #f8f8f2">profit3</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">kp</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">pwin;</span>
-<span style="color: #66d9ef">elseif</span> <span style="color: #f8f8f2">br</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">2</span>
- <span style="color: #f8f8f2">profit3</span> <span style="color: #f8f8f2">=</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">kp</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">cost;</span>
-<span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">fprintf(</span>&quot;<span style="color: #f8f8f2">ERROR:</span> <span style="color: #f8f8f2">invalid</span> <span style="color: #f8f8f2">entry</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">result</span> <span style="color: #f8f8f2">of</span> <span style="color: #f8f8f2">bet,</span> <span style="color: #f8f8f2">please</span> <span style="color: #f8f8f2">enter</span> <span style="color: #ae81ff">1</span>
-<span style="color: #f8f8f2">or</span> <span style="color: #ae81ff">2</span>&quot;<span style="color: #f8f8f2">)</span>
-<span style="color: #66d9ef">end</span>
+xaxis=[1:n];
+figure;plot(smoothc, 'Linewidth', 3);
+title('Overall Profit Analysis'), xlabel('Number of Bets'), ylabel('Amount (USD)')
 
-<span style="color: #75715e">%calculating net profit</span>
 
-<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">saletype</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
- <span style="color: #f8f8f2">netprofit</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">profit1;</span>
-<span style="color: #66d9ef">else</span>
- <span style="color: #f8f8f2">netprofit</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">profit2</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">profit3;</span>
+figure;plot(smoothpercwin,'r','LineWidth', 2);
+title('Profit analysis "wins v. losses"'), xlabel('Number of Bets'), ylabel('% win (w/ respect to initial investment)')
+hold on; plot(smoothsperc, 'k','LineWidth', 2); hold off
+legend({'% winnings','% sold'},'Location','northwest');
+legend('boxoff')
 
-<span style="color: #66d9ef">end</span>
+figure;plot(smoothbamount,'c','LineWidth', 0.75);
+title('Analysis For Sellers'), xlabel('Number of Bets'), ylabel('Amount (USD)')
+hold on; plot(smoothswins, 'r','LineWidth', 0.75); hold off
+hold on; plot(smoothploss,'k','LineWidth', 0.75); hold off
+hold on; plot(smoothcostmat,'b','LineWidth', 0.75); hold off
+legend({'Initial Bet amount','potential win','potential loss','Selling Price'},'Location','northwest');
+legend('boxoff')
 
-<span style="color: #66d9ef">end</span>
+sz=5;
+figure;plot(smoothodds22,'r','LineWidth',1.5)
+title('Analysis For Buyers'), xlabel('Number of bets'), ylabel('Odds (moneyline)')
+hold on; plot(smoothodds44,'k','LineWidth',1); hold off
+w = mean(odds22);
+t = mean(odds44);
+legend({'Odds for Buyer','Vegas Odds'},'Location','northwest');
+legend('boxoff')
 
-<span style="color: #75715e">%Set Plotting variables</span>
 
-<span style="color: #f8f8f2">result(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=netprofit;</span>
-<span style="color: #f8f8f2">paymat(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=buyerpays;</span>
-<span style="color: #f8f8f2">costmat(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=cost;</span>
-<span style="color: #f8f8f2">bamount(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=bet;</span>
-<span style="color: #f8f8f2">swins(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=pwin;</span>
-<span style="color: #f8f8f2">odds22(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=nodds;</span>
-<span style="color: #f8f8f2">odds11(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=odds1;</span>
-<span style="color: #f8f8f2">sperc(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=sp</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">odds44(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=odds4;</span>
-<span style="color: #f8f8f2">ploss(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">bet;</span>
-<span style="color: #f8f8f2">percwin(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=(netprofit</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">cost)</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">c</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
-<span style="color: #f8f8f2">c(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">result(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
 
-<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">j</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:n</span>
- <span style="color: #f8f8f2">c(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,j)</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">result(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,j)</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">c(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,j</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
-
-<span style="color: #66d9ef">end</span>
-
-<span style="color: #66d9ef">end</span>
-
-<span style="color: #f8f8f2">z=[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">];</span>
-
-<span style="color: #75715e">%End number runs</span>
-<span style="color: #75715e">%Output Plots</span>
-<span style="color: #75715e">%Plot Overall Profit Analysis</span>
-
-<span style="color: #f8f8f2">figure;plot(c,</span><span style="color: #e6db74">&#39;k&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">title(</span><span style="color: #e6db74">&#39;Overall Profit Analysis&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">xlabel(</span><span style="color: #e6db74">&#39;time&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">ylabel(</span><span style="color: #e6db74">&#39;Dollar</span>
-<span style="color: #e6db74">amount&#39;</span><span style="color: #f8f8f2">)</span>
-
-<span style="color: #75715e">%Plot Percentage win Plot</span>
-<span style="color: #75715e">%Wins vs. Losses</span>
-
-<span style="color: #f8f8f2">figure;plot(percwin,</span><span style="color: #e6db74">&#39;r&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">title(</span><span style="color: #e6db74">&#39;Profit analysis &quot;wins v. losses&quot;&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">xlabel(</span><span style="color: #e6db74">&#39;time&#39;</span><span style="color: #f8f8f2">),</span>
-<span style="color: #f8f8f2">ylabel(</span><span style="color: #e6db74">&#39;dollar amount&#39;</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">on;</span> <span style="color: #f8f8f2">plot(sperc,</span> <span style="color: #e6db74">&#39;k&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span> <span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">off</span>
-
-<span style="color: #75715e">%Plot Bet amount</span>
-<span style="color: #75715e">%Plots analysis plot for sellers</span>
-<span style="color: #75715e">%”Why would sellers value this Platform?”</span>
-
-<span style="color: #f8f8f2">figure;plot(bamount,</span><span style="color: #e6db74">&#39;c&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">title(</span><span style="color: #e6db74">&#39;analysis for sellers&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">xlabel(</span><span style="color: #e6db74">&#39;time&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">ylabel(</span><span style="color: #e6db74">&#39;amount</span>
-<span style="color: #e6db74">(dollars)&#39;</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">on;</span> <span style="color: #f8f8f2">plot(swins,</span> <span style="color: #e6db74">&#39;r&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span> <span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">off</span>
-<span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">on;</span> <span style="color: #f8f8f2">plot(ploss,</span><span style="color: #e6db74">&#39;k&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span> <span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">off</span>
-<span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">on;</span> <span style="color: #f8f8f2">plot(costmat,</span><span style="color: #e6db74">&#39;b&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span> <span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">off</span>
-
-<span style="color: #75715e">%Plot Odds</span>
-<span style="color: #75715e">%Analysis for Sellers</span>
-<span style="color: #75715e">%Why would Potential sellers Value this </span>
-<span style="color: #f8f8f2">Platform</span>?
-
-<span style="color: #f8f8f2">figure;plot(odds22,</span><span style="color: #e6db74">&#39;c&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">title(</span><span style="color: #e6db74">&#39;analysis for buyers&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">xlabel(</span><span style="color: #e6db74">&#39;time&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">ylabel(</span><span style="color: #e6db74">&#39;odds&#39;</span><span style="color: #f8f8f2">)</span>
-<span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">on;</span> <span style="color: #f8f8f2">plot(odds44,</span> <span style="color: #e6db74">&#39;r&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span> <span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">off</span>
-<span style="color: #f8f8f2">w</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">mean(odds22);</span>
-<span style="color: #f8f8f2">t</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">mean(odds44);</span>
-
-<span style="color: #75715e">%End simulation</span>
-</pre></td></tr></table></div>
+       </code>
+       </pre>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -676,6 +567,19 @@
 				</div>
 			</div>
 		</div>
+    
+    <!-- Creating Modal1 -->
+						<div id="myModal1" class="modal fade" role="dialog">
+  						<div class="modal-dialog modal-lg">
+							    <!-- Modal1 content-->
+                            
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Output</h4>
+      </div>
+      <div class="modal-body">
+                             
+        </div>
 		<div class="row mt-5 justify-content-center">
 			<div class="col-lg-6 text-center">
 				<a href="portfolio-single4.html" class="btn btn-dark">Previous Work</a>
@@ -683,6 +587,10 @@
 			</div>
 		</div>
 	</div>
+                            </div>
+    </div>
+    
+                            
 </section>
 
 
