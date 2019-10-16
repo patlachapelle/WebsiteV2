@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Profit Analysis | Pat LaChapelle</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+  <link rel="stylesheet" href="plugins/counto/animate.css">
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+  <link rel="stylesheet" href="plugins/animated-text/animated-text.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/portfoliostyle.css" rel="stylesheet">
+
+</head>
+
+<body>
+  
+<!-- Navigation Start -->
+<!-- Header Start --> 
+
+
+
+<!-- Header Close --> 
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Portfolio | Pat LaChapelle</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Resume.html">Resum&#233</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Portfolio.html">Portfolio</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navigation ENd -->
+
+
+<section class="page-title section pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="text-center">
+          <h1 class="text-capitalize mb-0 text-lg">Profit Analysis (MATLAB)</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section portfolio-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<img src="images/portfolio/9.jpg" alt="" class="img-fluid w-100">
+			</div>
+
+			<div class="col-lg-6">
+				<div class="project-info">
+					<h3 class="mb-4">Computational Analysis</h3>
+					<p>An elementary Profit Analysis of a potential Betting Platform in its primary stage of development.</p>
+
+					<p>This was a profit analysis created for a client, analyzing a prospective new type of gambling platform. The concept of this platform to create a place where sports bettors could buy sell their bets during live event. Individuals would be able to sell bets to either other sellers or to the site using an "automatic pay" feature. This analysis accounts for the variety of variables at play. It outputs multiple graphs showing the results for the run. It runs the simulation for n number of bets. </p>
+
+							<div class="info">
+								<h5 class="mb-0">Year</h5>
+								<p>2019</p>
+							</div>
+					
+					<div class="col-lg-6">
+							<div class="info">
+								<h5 class="mb-0" data-toggle="modal" data-target="#myModal">Category</h5>
+								<p>Computational Analysis</p>
+							</div>
+						
+							<div class="mt-4">
+								<a href="" class="btn btn-main btn-small"  data-toggle="modal" data-target="#myModal">View Code</a>
+							</div>
+						</div>
+				
+				
+
+						<!-- Creating Modal -->
+						<div id="myModal" class="modal fade" role="dialog">
+  						<div class="modal-dialog modal-lg">
+							    <!-- Modal content-->
+							
+							
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">STEREO Quadrature CME Analysis Poster</h4>
+      </div>
+      <div class="modal-body">
+        <div style="background: #272822; overflow:none;width:95%;"><table><tr><td><pre style="margin: 0; line-height: 125%">  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">%{</span>
+<span style="color: #75715e">Title: Simulation of Profits for Prospective betting website</span>
+<span style="color: #75715e">Author: Patrick LaChapelle</span>
+<span style="color: #75715e"> Email: patlachapelle3@gmail.com</span>
+<span style="color: #75715e"> Website: patlachapelle.us</span>
+<span style="color: #75715e">Created for: Ricardo Arambula</span>
+<span style="color: #75715e">Date: 13 November, 2018</span>
+<span style="color: #75715e">Description: This is a profit analysis created for a potential new</span>
+<span style="color: #75715e">betting website. This website would use a “stock market” approach</span>
+<span style="color: #75715e">to betting, allowing bettors to buy and sell bets during live games</span>
+<span style="color: #75715e">on the platform. Buyers would be able to interact with a seller</span>
+<span style="color: #75715e">directly or use an “Automatic buy” feature, which guarantees the</span>
+<span style="color: #75715e">site will buy the bet. This profit simulation accounts for a</span>
+<span style="color: #75715e">specific algorithm (ALG_IV) Being tested to determine the value of</span>
+<span style="color: #75715e">the “automatic buy.”</span>
+<span style="color: #75715e">%}</span>
+
+<span style="color: #75715e">%Begin Simulation</span>
+<span style="color: #75715e">%Clear previous runs</span>
+
+<span style="color: #f8f8f2">clear</span> <span style="color: #f8f8f2">all</span>
+<span style="color: #f8f8f2">close</span> <span style="color: #f8f8f2">all</span>
+
+<span style="color: #75715e">%Set n (n = number of bets being made)</span>
+
+<span style="color: #f8f8f2">n=</span><span style="color: #ae81ff">10000</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #75715e">%set variables</span>
+
+<span style="color: #f8f8f2">ploss</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+<span style="color: #f8f8f2">paymat</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+<span style="color: #f8f8f2">costmat</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+<span style="color: #f8f8f2">bamount</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+<span style="color: #f8f8f2">swins</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+<span style="color: #f8f8f2">odds22</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+<span style="color: #f8f8f2">odds11</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+<span style="color: #f8f8f2">result</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+<span style="color: #f8f8f2">odds44</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+<span style="color: #f8f8f2">sperc</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+<span style="color: #f8f8f2">percwin</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+
+<span style="color: #75715e">%Determine values for “new odds”</span>
+<span style="color: #75715e">%Must vary this parameter for accurate simulations</span>
+
+<span style="color: #75715e">%Create “randomness”</span>
+
+<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">z</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:n</span>
+ <span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">randi(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">a</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
+ <span style="color: #f8f8f2">b</span> <span style="color: #f8f8f2">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">b</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">end</span>
+<span style="color: #f8f8f2">d</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">randi(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">e</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">randi(</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">e</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
+ <span style="color: #f8f8f2">f</span> <span style="color: #f8f8f2">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">f</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">end</span>
+<span style="color: #f8f8f2">g</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">randi(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #75715e">%establishing the price of initial sale</span>
+<span style="color: #75715e">%establishing values of necessary variables</span>
+
+<span style="color: #f8f8f2">bet</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">(</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">rand;</span>
+<span style="color: #f8f8f2">odds</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">b</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">d</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">nodds</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">f</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">g</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">saletype</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #75715e">% defining variable constants</span>
+
+<span style="color: #f8f8f2">r</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">0.01</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #75715e">%Changing odds from 100s values to </span>
+<span style="color: #f8f8f2">computable</span> <span style="color: #f8f8f2">decimal</span> <span style="color: #f8f8f2">probabilities</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">odds</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">0</span>
+ <span style="color: #f8f8f2">odds1</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">odds</span><span style="color: #f92672">/</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">odds1</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">100</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">(abs(odds));</span>
+<span style="color: #66d9ef">end</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">nodds</span> <span style="color: #f92672">&gt;</span> <span style="color: #ae81ff">0</span>
+ <span style="color: #f8f8f2">odds2</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">nodds</span><span style="color: #f92672">/</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">odds2</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">100</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">(abs(nodds));</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e">%calculating the potential win amount</span>
+
+<span style="color: #f8f8f2">pwin</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">bet</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">bet</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">odds1;</span>
+
+<span style="color: #75715e">%finding the cost equation</span>
+<span style="color: #75715e">%cost equation constants</span>
+<span style="color: #75715e">%constant for 3rd party</span>
+
+<span style="color: #f8f8f2">k1=</span><span style="color: #ae81ff">0.5</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #75715e">%constant for guaranteed buy</span>
+
+<span style="color: #f8f8f2">k2</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">0.6</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #75715e">%run loop</span>
+
+<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:length(k2)</span>
+
+<span style="color: #75715e">%if then statements determining k according to sale type</span>
+
+<span style="color: #75715e">%allows for greater level of randomness</span>
+
+ <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">saletype</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
+ <span style="color: #f8f8f2">k</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">k1;</span>
+<span style="color: #66d9ef">elseif</span> <span style="color: #f8f8f2">saletype</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">2</span>
+ <span style="color: #f8f8f2">k=k2;</span>
+<span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">fprintf(</span>&quot;<span style="color: #f8f8f2">ERROR:</span> <span style="color: #f8f8f2">Invalid</span> <span style="color: #f8f8f2">input</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">sale</span> <span style="color: #f8f8f2">type</span>&quot;<span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #f8f8f2">cost</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">(bet</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">1</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">odds1))</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">(k</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">(odds2</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">));</span>
+
+<span style="color: #75715e">%calculating what the buyer pays</span>
+
+<span style="color: #f8f8f2">buyerpays</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">cost</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">r</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">cost;</span>
+
+<span style="color: #75715e">%calculating new odds for buyer</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">cost</span> <span style="color: #f92672">&lt;</span><span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">pwin</span>
+ <span style="color: #f8f8f2">odds3</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">100</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">pwin</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">buyerpays;</span>
+<span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">odds3</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">buyerpays</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">pwin;</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e">%output for part 1 (cost equation)</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">saletype</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
+<span style="color: #f8f8f2">fprintf(</span>&quot;<span style="color: #f8f8f2">seller</span> <span style="color: #f8f8f2">gets:</span> &quot;<span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">disp(cost);</span>
+<span style="color: #f8f8f2">fprintf(</span>&quot;<span style="color: #f8f8f2">Buyer</span> <span style="color: #f8f8f2">pays:</span> &quot;<span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">disp(buyerpays);</span>
+<span style="color: #f8f8f2">fprintf(</span>&quot;<span style="color: #f8f8f2">New</span> <span style="color: #f8f8f2">odds</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">the</span> <span style="color: #f8f8f2">buyer</span> <span style="color: #f8f8f2">are:</span> &quot;<span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">disp(odds3)</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e">%CALCULATING NET PROFIT FOR SITE</span>
+<span style="color: #75715e">%setting variables for profit equations</span>
+
+<span style="color: #f8f8f2">sp1</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">25</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">sp</span> <span style="color: #f8f8f2">=(rand)</span><span style="color: #f92672">*</span><span style="color: #ae81ff">0.8</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">kp</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">sp;</span>
+<span style="color: #f8f8f2">h</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">randi(</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">h</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
+ <span style="color: #f8f8f2">br</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">br</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e">%calculate selling statistics</span>
+
+<span style="color: #f8f8f2">sprice</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">2</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">cost;</span>
+
+<span style="color: #75715e">%odds for buyer on site</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">sprice</span> <span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">pwin</span>
+ <span style="color: #f8f8f2">odds4</span> <span style="color: #f8f8f2">=</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">(sprice</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">pwin;</span>
+<span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">odds4</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">(pwin</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">sprice;</span>
+<span style="color: #66d9ef">end</span>
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">nodds</span> <span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">odds4</span><span style="color: #f92672">-</span><span style="color: #ae81ff">100</span>
+ <span style="color: #f8f8f2">odds4</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">nodds</span><span style="color: #f92672">+</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
+ <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">sprice</span><span style="color: #f92672">&gt;</span><span style="color: #f8f8f2">pwin</span>
+ <span style="color: #f8f8f2">sprice</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">pwin</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">(nodds</span><span style="color: #f92672">+</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">/</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
+ <span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">sprice</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">(</span><span style="color: #ae81ff">100</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">pwin)</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">(nodds</span><span style="color: #f92672">+</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">);</span>
+ <span style="color: #66d9ef">end</span>
+<span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">odds4</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">odds4;</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e">%calculating profits</span>
+
+<span style="color: #f8f8f2">profit1</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">r</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">cost;</span>
+<span style="color: #f8f8f2">profit2</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">sp</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">sprice;</span>
+
+<span style="color: #75715e">%assigning values for profit3 according to </span>
+<span style="color: #f8f8f2">win</span> <span style="color: #f8f8f2">v.</span> <span style="color: #f8f8f2">lose</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">br</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
+ <span style="color: #f8f8f2">profit3</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">kp</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">pwin;</span>
+<span style="color: #66d9ef">elseif</span> <span style="color: #f8f8f2">br</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">2</span>
+ <span style="color: #f8f8f2">profit3</span> <span style="color: #f8f8f2">=</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">kp</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">cost;</span>
+<span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">fprintf(</span>&quot;<span style="color: #f8f8f2">ERROR:</span> <span style="color: #f8f8f2">invalid</span> <span style="color: #f8f8f2">entry</span> <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">result</span> <span style="color: #f8f8f2">of</span> <span style="color: #f8f8f2">bet,</span> <span style="color: #f8f8f2">please</span> <span style="color: #f8f8f2">enter</span> <span style="color: #ae81ff">1</span>
+<span style="color: #f8f8f2">or</span> <span style="color: #ae81ff">2</span>&quot;<span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e">%calculating net profit</span>
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">saletype</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">1</span>
+ <span style="color: #f8f8f2">netprofit</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">profit1;</span>
+<span style="color: #66d9ef">else</span>
+ <span style="color: #f8f8f2">netprofit</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">profit2</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">profit3;</span>
+
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #75715e">%Set Plotting variables</span>
+
+<span style="color: #f8f8f2">result(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=netprofit;</span>
+<span style="color: #f8f8f2">paymat(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=buyerpays;</span>
+<span style="color: #f8f8f2">costmat(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=cost;</span>
+<span style="color: #f8f8f2">bamount(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=bet;</span>
+<span style="color: #f8f8f2">swins(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=pwin;</span>
+<span style="color: #f8f8f2">odds22(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=nodds;</span>
+<span style="color: #f8f8f2">odds11(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=odds1;</span>
+<span style="color: #f8f8f2">sperc(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=sp</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">odds44(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=odds4;</span>
+<span style="color: #f8f8f2">ploss(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">bet;</span>
+<span style="color: #f8f8f2">percwin(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,z)=(netprofit</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">cost)</span><span style="color: #f92672">*</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">c</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">zeros(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,n);</span>
+<span style="color: #f8f8f2">c(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">result(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">j</span> <span style="color: #f8f8f2">=</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:n</span>
+ <span style="color: #f8f8f2">c(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,j)</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">result(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,j)</span><span style="color: #f92672">+</span><span style="color: #f8f8f2">c(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,j</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #66d9ef">end</span>
+
+<span style="color: #f8f8f2">z=[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">:</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">];</span>
+
+<span style="color: #75715e">%End number runs</span>
+<span style="color: #75715e">%Output Plots</span>
+<span style="color: #75715e">%Plot Overall Profit Analysis</span>
+
+<span style="color: #f8f8f2">figure;plot(c,</span><span style="color: #e6db74">&#39;k&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">title(</span><span style="color: #e6db74">&#39;Overall Profit Analysis&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">xlabel(</span><span style="color: #e6db74">&#39;time&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">ylabel(</span><span style="color: #e6db74">&#39;Dollar</span>
+<span style="color: #e6db74">amount&#39;</span><span style="color: #f8f8f2">)</span>
+
+<span style="color: #75715e">%Plot Percentage win Plot</span>
+<span style="color: #75715e">%Wins vs. Losses</span>
+
+<span style="color: #f8f8f2">figure;plot(percwin,</span><span style="color: #e6db74">&#39;r&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">title(</span><span style="color: #e6db74">&#39;Profit analysis &quot;wins v. losses&quot;&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">xlabel(</span><span style="color: #e6db74">&#39;time&#39;</span><span style="color: #f8f8f2">),</span>
+<span style="color: #f8f8f2">ylabel(</span><span style="color: #e6db74">&#39;dollar amount&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">on;</span> <span style="color: #f8f8f2">plot(sperc,</span> <span style="color: #e6db74">&#39;k&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span> <span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">off</span>
+
+<span style="color: #75715e">%Plot Bet amount</span>
+<span style="color: #75715e">%Plots analysis plot for sellers</span>
+<span style="color: #75715e">%”Why would sellers value this Platform?”</span>
+
+<span style="color: #f8f8f2">figure;plot(bamount,</span><span style="color: #e6db74">&#39;c&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">title(</span><span style="color: #e6db74">&#39;analysis for sellers&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">xlabel(</span><span style="color: #e6db74">&#39;time&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">ylabel(</span><span style="color: #e6db74">&#39;amount</span>
+<span style="color: #e6db74">(dollars)&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">on;</span> <span style="color: #f8f8f2">plot(swins,</span> <span style="color: #e6db74">&#39;r&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span> <span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">off</span>
+<span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">on;</span> <span style="color: #f8f8f2">plot(ploss,</span><span style="color: #e6db74">&#39;k&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span> <span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">off</span>
+<span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">on;</span> <span style="color: #f8f8f2">plot(costmat,</span><span style="color: #e6db74">&#39;b&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span> <span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">off</span>
+
+<span style="color: #75715e">%Plot Odds</span>
+<span style="color: #75715e">%Analysis for Sellers</span>
+<span style="color: #75715e">%Why would Potential sellers Value this </span>
+<span style="color: #f8f8f2">Platform</span>?
+
+<span style="color: #f8f8f2">figure;plot(odds22,</span><span style="color: #e6db74">&#39;c&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">title(</span><span style="color: #e6db74">&#39;analysis for buyers&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">xlabel(</span><span style="color: #e6db74">&#39;time&#39;</span><span style="color: #f8f8f2">),</span> <span style="color: #f8f8f2">ylabel(</span><span style="color: #e6db74">&#39;odds&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">on;</span> <span style="color: #f8f8f2">plot(odds44,</span> <span style="color: #e6db74">&#39;r&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;LineWidth&#39;</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.001</span><span style="color: #f8f8f2">);</span> <span style="color: #f8f8f2">hold</span> <span style="color: #f8f8f2">off</span>
+<span style="color: #f8f8f2">w</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">mean(odds22);</span>
+<span style="color: #f8f8f2">t</span> <span style="color: #f8f8f2">=</span> <span style="color: #f8f8f2">mean(odds44);</span>
+
+<span style="color: #75715e">%End simulation</span>
+</pre></td></tr></table></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+						
+						
+						
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-5 justify-content-center">
+			<div class="col-lg-6 text-center">
+				<a href="portfolio-single4.html" class="btn btn-dark">Previous Work</a>
+				<a href="portfolio-single2.html" class="btn btn-dark">Next Work</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/aos/aos.js"></script>
+<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+<script src="plugins/shuffle/shuffle.min.js"></script>
+<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="plugins/animated-text/animated-text.js"></script>
+<script src="plugins/counto/apear.js"></script>
+<script src="plugins/counto/counTo.js"></script>
+
+ <!-- Google Map -->
+<script src="plugins/google-map/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script> 
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+</html>
