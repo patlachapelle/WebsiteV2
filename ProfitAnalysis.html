@@ -81,7 +81,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
-				<img src="images/portfolio/9.jpg" alt="" class="img-fluid w-100">
+				<img src="img/MLGraph2.png" alt="" class="img-fluid w-100">
 			</div>
 			<div class="col-lg-6">
 				<div class="project-info">
@@ -92,28 +92,29 @@
 								<h5 class="mb-0">Year</h5>
 								<p>2019</p>
 							</div>
-					
-					<div class="col-lg-6">
-							<div class="info">
-								<h5 class="mb-0" data-toggle="modal" data-target="#myModal">Category</h5>
-								<p>Computational Analysis</p>
-							</div>
-						
-							<div class="mt-4">
-								<a href="" class="btn btn-main btn-small"  data-toggle="modal" data-target="#myModal">View Code</a>
-							</div>
-						</div>
                     
-                    <div class="mt-4">
-								<a href="" class="btn btn-main btn-small"  data-toggle="modal1" data-target="#myModal1">View Output</a>
-							</div>
-						</div>
+                            <div class="info">
+                            <h5 class="mb-0">Category</h5>
+								<p>Computational Analysis</p>
+                            </div>
+                            
+					
+					
+						
+                    <div class="btn-group">
+  <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal">View Code</button>
+  <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal1">View Output</button>
+  <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal2">Run Code</button>
+                    </div>		
+                    
+                            
+						
 				
 				
-						<!-- Creating Modal -->
+						<!-- Creating Modal1 -->
 						<div id="myModal" class="modal fade" role="dialog">
   						<div class="modal-dialog modal-lg">
-							    <!-- Modal content-->
+							    <!-- Modal1 content-->
 							
 							
     <div class="modal-content">
@@ -578,17 +579,51 @@ legend('boxoff')
         <h4 class="modal-title">Output</h4>
       </div>
       <div class="modal-body">
+          <p>Output for this simulation includes four distinct graphs: 1. Analyzing the Overall profit for the company, 2. Analyzing the percentage win for each bet kept (unable to be sold) by the company, alongside percentage sold, 3. Analyzing the model for individual bettors wishing to sell their bets (why people would use the site to sell), and 4. Analyzing the site for individual buyers purchasing bets on the site (why people would want to purchase bets). Each graph is produced using a moving average to "smooth" the data. To run this code for yourself, select the "run code" tab. Each graph is analyzing a single specific run of the simulation.</p>
+          <img class="img-fluid" alt="Responsive image" src="img/MLGraph3.png">
+          <img class="img-fluid" alt="Responsive image" src="img/MLGraph1.png">
+          <img class="img-fluid" alt="Responsive image" src="img/MLGraph2.png">
+          <img class="img-fluid" alt="Responsive image" src="img/MLGraph4.png">
+          
+        </div>
+                            </div>
+                            </div>
                              
         </div>
+    
+    <!--End Modal1 -->
+    
+    <!-- Begin Modal2 -->
+    <div id="myModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Output</h4>
+      </div>
+      <div class="modal-body">
+          <h1>Overview</h1>
+          <p>This code is a simulation, and will therefore produce varying results for each run. On line 3, the <span style="font-style:italic font-weight:bold">n</span> variable is set to 100. This sets the number of bets the simulation uses. You can adjust this however you please, but keep in mind that a higher n value means more time per run. To get rid of the smoothing functions and view the raw data set, you can comment out that portion of code.</p>
+          <p>&nbsp;</p>
+            <p>You can run this code in Online MATLAB environment, <a href="https://octave-online.net/">Octave.net</a>, created by GitHub user sffc.</p>
+          <p>&nbsp;</p>
+          <p><a  target="_blank" href="https://octave-online.net/bucket~YB8gvqdtZnukfrMbpzpxaF"><span style="font-weight:bold;">Click here to run</span></a></p>
+           </div>
+                            </div>
+                            </div>
+                             
+        </div>
+    <!-- End Modal2 -->
+    
 		<div class="row mt-5 justify-content-center">
 			<div class="col-lg-6 text-center">
 				<a href="portfolio-single4.html" class="btn btn-dark">Previous Work</a>
 				<a href="portfolio-single2.html" class="btn btn-dark">Next Work</a>
 			</div>
 		</div>
-	</div>
-                            </div>
-    </div>
+	    
+	
+                            
+    
     
                             
 </section>
