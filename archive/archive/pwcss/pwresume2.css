@@ -1,0 +1,132 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 3, 2018, 1:05:46 PM
+    Author     : patla
+*/
+
+body{
+    font:20px/1.5 Arial, Helvetica, sans-serif;
+    padding-left:10%;
+    padding-right:10%;
+    margin:5px;
+    list-style:none;
+    text-align: left;
+    background-color:#d9d9d9;
+}
+
+#jumpto{
+  
+  padding-left:10%;
+  text-align:left;
+  font-size:40px;
+}
+
+#jumplist{
+  text-align:left;
+  padding-left:12%;
+}
+
+body p{
+    font:15px;
+}
+
+.container{
+    float:none;
+    text-align: center;
+    width:auto;
+    height:auto;
+    font-size:30px;
+    float:top;
+   
+}
+
+.header1{
+    
+    color:#00abff;
+    font-family: Impact;
+}
+
+header{
+background-color: #d9d9d9;
+color:#00abff;
+padding-top:0px;
+min-height: 0px;
+}
+
+header a {
+    color: #00abff;
+    text-transform: uppercase;
+    font-size:30px;
+     padding-top:0px
+}
+
+
+header li{
+    float:end;
+    width: auto;
+    height: 30px;
+    line-height:10px;
+    font-size:20px;
+    display:inline;
+    padding-left:100px;
+    padding-right:100px;
+}
+
+header a:hover{
+    background-color: #00abff;
+    color:#ffffff;
+}
+
+section#Aboutme{
+    padding-top:25px;
+    text-align:center;
+    height:auto;
+    width:auto;
+}
+    
+
+#menu-outer{
+    height: 20px;
+    background: #000000
+}
+
+.table{
+    display:table;
+    margin:40px auto;
+    
+}
+
+u1#h-list{
+    float:left;
+    list-style:none;
+}
+
+.heading{
+    width:auto;
+    height:auto;
+    float:none;
+    color: #00abff;
+    padding-top: 10px;
+}
+
+body h1{
+  font-size:50px;
+}
+
+#jumplist ul a{
+  color:inherit;
+  font-type:impact;
+  font-color:#00abff;
+  font-weight:normal;
+  list-style:none;
+  text-decoration:none;
+}
+
+#jumplist ul a:hover{
+  color:red;
+  font-weight:bolder;
+}
