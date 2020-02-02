@@ -39,8 +39,11 @@
             <a class="nav-link js-scroll-trigger" href="#contact">Host</a>
           </li>
 			<li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
+          <button class="btn btn-primary btn-modal"
+        data-toggle="modal"
+        data-target="#fsModal">
+  Contact
+</button>
         </ul>
       </div>
     </div>
@@ -58,39 +61,91 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>About the Podcast</h2>
-          <p class="lead">Velox Twitch is a podcast created, produced and released by athletes, for athletes. I focus on the mindset, training and lifestyle required to excel in athletic endeavors</p>
-          <ul>
-            <li>New episodes every week</li>
-            <li>Available wherever you get podcasts</li>
-            <li>Created with athletes in mind</li>
-            <li>Reasonable episode lengths</li>
-          </ul>
+          <p class="lead">Podcast centered around athletic mindset, training & life. More than an Athlete, More than a lifestyle. We have had a plethora of guests from current athletes to former athletes re-inventing success in a different avenue through the mindset they’ve built. Our goal is to build a platform to help inspire and develop advanced humans through interviewing successful individuals.</p>
+          <p>&nbsp;</p>
+			<h2>What's Coming Next?</h2>
+			<p>By the end of February, 2020, Velox Twitch will officially be launched to I-Tunes, Youtube, and have a Merch line. </p>
         </div>
       </div>
     </div>
   </section>
-
-  <section id="services" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Services we offer</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="fsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Interested about coming on the show, joining the team, or know someone who would be a good fit?  Let’s talk!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Contact us</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+      <div class="modal-body">
+        <div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form action="https://formspree.io/xledrzon" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="email"  name="_replyto" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">
+                                Subject</label>
+                            <select id="subject" name="subject" class="form-control" required="required">
+                                <option value="na" selected="">Choose One:</option>
+                                <option value="professional-inquiry">Guest Inquiry</option>
+                                <option value="suggestions">Suggestions</option>
+								<option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Message</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                            Send Message</button>
+                    </div>
+                </div>
+                </form>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+        <div class="col-md-4">
+            <form>
+            <legend><span class="glyphicon glyphicon-globe"></span>Contact Information</legend>
+            <address>
+                <strong>Andrew LaChapelle</strong><br>
+                1804 NE 50th St.<br>
+                Seattle, WA 98105<br>
+                <abbr title="Phone">
+                    P:</abbr>
+                (805) 390-2740
+            </address>
+            <address>
+                <strong></strong><br>
+                <a href="mailto:#">veloxtwitch@gmail.com</a>
+				
+            </address>
+				<div>
+					<!--End of Modal-->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
