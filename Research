@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Current Research</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Current Research </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Arctic Wind Analysis</a>
+        <!--<a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+-->
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Arctic Wind Analysis</h1>
+		  <h2>Overview</h2>
+		  <p> As I make progress on this notebook, I will be updating the associated HTML files so that the current version of the Jupyter notebook of the project is viewable. Additionally, there is an archive for the previous versions of the notebook for reference and comparison.</p>
+        <h2 class='mt-4'>Project Abstract</h2>
+		  <p>Sea ice plays a significant role in the global climate, but the details of summer melt processes remain poorly resolved.  Sustained low-wind events over the Arctic Ocean have been observed to correspond to high salinity and temperature stratification in sea-ice leads, consequently increasing lateral melt rates during summer. Such an effect is currently unaccounted for in leading climate models, and appropriate parameterization could potentially reduce error in 
+projections. We used a wind reanalysis dataset produced by the National Center for Environmental Prediction (NCEP) and the National Center for Atmospheric Research (NCAR) to study wind patterns in the Arctic. We focused on daily variation in oceanic regions at latitudes above 65 degrees during Summer (May 1 - September 30) over 2010-2019. An index of low-wind events was extracted from the reanalysis data and these events were classified according to length of event and geographical extent. Our results suggest that low wind events are frequent throughout the summer, but are not equally distributed spatially across the basin. Low-wind events were compared to other climate data, including sea-ice extent, on a spatial and temporal basis. Our results were compared to climate model output and differences were examined. We propose a basic parameterization of the effect of low-wind events on sea ice melt, and suggest further collection of observational data to improve physical representation in climate models.
+</p>
+		<h2>Jupyter Notebooks</h2>
+		  <p>All of the work is currently being done using the Jupyter notebook platform. This platform was chosen because of the ease with which it can flow between code and markdown, allowing for simple and easy annotation.</p>
+		  <h3>Current Notebook</h3>
+		  <a target="_blank" href="https://patlachapelle.us/SeaIceNotebook.html" class="btn btn-info" role="button">View Current version</a>
+		  <p>Version:2</p>
+		  <p>Updated: 18 February 2020</p>
+		  <ul>Notes:
+		  	<li>Fixed issue with mask</li>
+		 	 <li>First attempt at making an index of low-wind events</li>
+		  </ul>
+		  <h3>Previous Versions</h3>
+		  <a target="_blank" href="https://patlachapelle.us/SeaIceNotebookArchive/V1.html" class="btn btn-info" role="button">Version 1</a>
+		  <p>Updated: 8 February 2020</p>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>
